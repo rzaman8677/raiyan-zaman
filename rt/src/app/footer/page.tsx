@@ -2,7 +2,7 @@ import { faLinkedin } from "@fortawesome/free-brands-svg-icons/faLinkedin";
 import { faTiktok } from "@fortawesome/free-brands-svg-icons/faTiktok";
 import { faYoutube } from "@fortawesome/free-brands-svg-icons/faYoutube";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import styles from "./Home.module.css"; 
+import styles from "./Footer.module.css"; 
 import { faGithub } from "@fortawesome/free-brands-svg-icons/faGithub";
 
 const Footer = () => (
