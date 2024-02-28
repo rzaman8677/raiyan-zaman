@@ -12,6 +12,7 @@
     "@fortawesome/fontawesome-svg-core": "^6.5.1",
     "@fortawesome/free-brands-svg-icons": "^6.5.1",
     "@fortawesome/react-fontawesome": "^0.2.0",
+    "aws-amplify": "^6.0.18",
     "framer-motion": "^11.0.3",
     "next": "^14.1.0",
     "react": "^18.2.0",
@@ -20,14 +21,19 @@
     "swiper": "^11.0.6"
   },
   "devDependencies": {
+    "@aws-amplify/backend": "^0.12.1",
+    "@aws-amplify/backend-cli": "^0.11.1",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "autoprefixer": "^10.0.1",
+    "aws-cdk": "^2.130.0",
+    "aws-cdk-lib": "^2.130.0",
+    "constructs": "^10.3.0",
     "eslint": "^8",
     "eslint-config-next": "14.1.0",
     "postcss": "^8",
     "tailwindcss": "^3.3.0",
-    "typescript": "^5"
+    "typescript": "^5.3.3"
   }
 }
