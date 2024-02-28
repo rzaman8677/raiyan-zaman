@@ -114,7 +114,7 @@ export default function About() {
             during this tumultuous period that I drew inspiration from athletes
             and leaders known for their resilience and work ethic. Figures like
             Stephen Curry, Tom Brady, and particularly Khabib Nurmagomedov,
-            became beacons of perseverance. Khabib's philosophy of relentless
+            became beacons of perseverance. Khabib&apos;s philosophy of relentless
             hard work, humility, and unwavering commitment to his craft in the
             face of adversity resonated deeply with me. His journey taught me
             that excellence is not just about achieving personal milestones but
@@ -148,7 +148,7 @@ export default function About() {
             opportunity serves as a constant reminder of the transformative
             power of technology. Inspired by the work ethic and resilience of
             the Bengali people, I am committed to leveraging technology as a
-            tool for empowerment and equity. Khabib's influence extends beyond
+            tool for empowerment and equity. Khabib&apos;s influence extends beyond
             the octagon into my professional aspirations, where his embodiment
             of leadership, integrity, and hard work serves as a guiding light.
             It is this blend of technological passion, engineering ingenuity,
@@ -179,7 +179,7 @@ export default function About() {
           <div className={styles.inputGroup}>
             <input type="text" placeholder="Your Name" required />
             <input type="email" placeholder="Your Email" required />
-            <textarea placeholder="Your Message" rows="4" required></textarea>
+            <textarea placeholder="Your Message" rows={4} required></textarea>
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}

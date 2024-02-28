@@ -2,10 +2,14 @@
 import React, { useState, useEffect } from "react";
 import Head from "next/head";
 import { AnimatePresence, motion } from "framer-motion";
-import styles from "./Engineering.module.css"; // Make sure the path to your CSS file is correct
+import styles from "./Engineering.module.css";
+
+interface ImageIndexState {
+  [key: string]: number;
+}
 
 const EngineeringPage = () => {
-  const [imageIndex, setImageIndex] = useState({
+  const [imageIndex, setImageIndex] = useState<ImageIndexState>({
     ftcRobotProject: 0,
     umdMindlabsBreathingProject: 0,
     umbcComputerEngineeringInternship: 0,
@@ -16,45 +20,48 @@ const EngineeringPage = () => {
   const projectImages = {
     ftcRobotProject: ["/images/11.webp", "/images/11.webp", "/images/11.webp", "/images/11.webp", "/images/22.jpg"],
     umdMindlabsBreathingProject: [
-      "/images/mindlabs1.jpg",
-      "/images/mindlabs2.jpg",
-      "/images/mindlabs3.jpg",
     ],
     umbcComputerEngineeringInternship: [
-      "/images/umbc1.jpg",
-      "/images/umbc2.jpg",
-      "/images/umbc3.jpg",
     ],
     clawBotProjectForPltw: [
-      "/images/clawBot1.jpg",
-      "/images/clawBot2.jpg",
-      "/images/clawBot3.jpg",
     ],
     autonomousRobotDesignProject: [
-      "/images/autoRobot1.jpg",
-      "/images/autoRobot2.jpg",
-      "/images/autoRobot3.jpg",
     ],
   };
 
   useEffect(() => {
-    const intervalIds = {};
-    Object.keys(projectImages).forEach((projectKey) => {
+    interface ProjectImages {
+      [key: string]: string[];
+    }
+
+    const projectImages: ProjectImages = {
+      ftcRobotProject: ["/images/11.webp", "/images/11.webp", "/images/11.webp", "/images/11.webp", "/images/22.jpg"],
+      umdMindlabsBreathingProject: [],
+      umbcComputerEngineeringInternship: [],
+      clawBotProjectForPltw: [],
+      autonomousRobotDesignProject: [],
+    };
+
+    const intervalIds: { [key: string]: NodeJS.Timeout } = {};
+    (Object.keys(projectImages) as (keyof typeof projectImages)[]).forEach((projectKey) => {
       intervalIds[projectKey] = setInterval(() => {
-        setImageIndex((prevIndices) => ({
-          ...prevIndices,
-          [projectKey]:
-            (prevIndices[projectKey] + 1) % projectImages[projectKey].length,
-        }));
+        setImageIndex((prevIndices) => {
+          // Ensure that projectKey is a keyof projectImages
+          const key = projectKey as keyof typeof prevIndices;
+          const newIndex = (prevIndices[key] + 1) % projectImages[key].length;
+          return {
+            ...prevIndices,
+            [key]: newIndex,
+          };
+        });
       }, 3000); // Rotate images every 3 seconds
     });
-
+  
     return () => {
-      Object.keys(intervalIds).forEach((intervalId) =>
-        clearInterval(intervalIds[intervalId])
-      );
+      Object.keys(intervalIds).forEach((intervalId) => clearInterval(intervalIds[intervalId as keyof typeof intervalIds]));
     };
   }, []);
+  
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -75,7 +82,7 @@ const EngineeringPage = () => {
   return (
     <div>
       <Head>
-        <title>Raiyan Zaman's Engineering Portfolio</title>
+        <title>Raiyan Zaman&apos;s Engineering Portfolio</title>
       </Head>
 
       <main className={styles.main}>
