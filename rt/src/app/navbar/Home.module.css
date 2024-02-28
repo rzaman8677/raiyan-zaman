@@ -1,0 +1,118 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #141b3100; /* Adjust to match your theme */
+  color: #fff;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  transition: background-color 0.3s ease;
+}
+
+.navbar.scrolled {
+  background-color: #0f1624; /* Slightly darker to indicate scroll */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+.brand:hover {
+  transform: scale(1.05);
+}
+
+.navToggle {
+  display: none; /* Hide toggle button on larger screens */
+  position: relative;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+.navLinks {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transition: all 0.5s ease-out;
+}
+
+.navLink {
+  position: relative;
+  display: block;
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.navLink::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background-color: #01e646;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+.navLink:hover::before {
+  visibility: visible;
+  width: 100%;
+}
+
+.navLink:hover {
+  color: #01e646; /* Highlight color */
+}
+
+/* Responsive toggle button */
+@media (max-width: 768px) {
+  .navToggle {
+    display: block;
+  }
+
+  .navLinks {
+    display: none; /* Hide links initially */
+    flex-direction: column;
+    width: 100%; /* Full width */
+    position: absolute;
+    top: 60px; /* Adjust based on navbar height */
+    left: 0;
+    background-color: #df0000; /* Match the navbar color */
+    padding: 1rem;
+    border-top: 2px solid #01e646; /* Highlighted border top */
+    z-index: 100000;
+  }
+
+  .navLinks.active {
+    display: flex; /* Display when active */
+    animation: slideDown 0.5s ease forwards; /* Smooth slide down animation */
+  }
+
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}

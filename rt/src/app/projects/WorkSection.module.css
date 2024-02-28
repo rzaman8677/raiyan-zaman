@@ -1,0 +1,101 @@
+.workContainer {
+  padding: 4rem 0;
+  color: #333;
+  overflow-y: hidden;
+}
+
+.workTitle {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+  color: #ece7e7;
+  text-align: center;
+}
+
+.workSection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0rem;
+}
+
+.imageContainer {
+  width: 50%;
+  height: 600px;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+}
+
+.textContainer {
+  width: 50%;
+  height: 600px; /* Adjust the height as needed */
+  display: grid; /* Using grid layout to center content */
+  place-items: center; /* This centers the content in both axes */
+  background-color: rgb(240, 245, 245);
+  border: #d10909 1px solid;
+  cursor: pointer;
+  overflow: hidden; /* In case the scale effect causes overflow */
+}
+
+.cardContainer {
+  display: flex;
+  justify-content: space-around;
+  margin: 2rem 0;
+}
+
+.card {
+  width: 45%;
+  background: #f7f7f7;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+@media (max-width: 768px) {
+  .workSection,
+  .cardContainer {
+    flex-direction: column;
+  }
+
+  .imageContainer,
+  .textContainer,
+  .card {
+    width: 100%;
+  }
+
+  .imageContainer {
+    height: 300px;
+  }
+
+  .textContainer {
+    height: 300px;
+  }
+
+  .card {
+    margin-bottom: 1rem;
+  }
+}
+
+.card:hover {
+  transform: translateY(-10px) rotateX(5deg) rotateY(5deg);
+}
+
+/* Add parallax effect for the background images */
+.imageContainer {
+  background-attachment: scroll; /* Change to 'fixed' for parallax effect, but it may not work well with auto-slide */
+}
+
+/* Add to WorkSection.module.css */
+
+.textLink {
+  color: inherit; /* Or whatever color you want the text to be */
+  text-decoration: none; /* Removes underline */
+  display: block; /* Makes the link fill its container */
+  height: 100%;
+}

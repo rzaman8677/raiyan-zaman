@@ -1,0 +1,43 @@
+.footer {
+  width: 100%;
+  padding: 20px 0;
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+}
+
+.socialLinks {
+  display: flex;
+  gap: 50px; /* Adjust the space between icons as needed */
+}
+
+.socialIcon {
+  font-size: 24px; /* Icon size, adjust if needed */
+  color: #ffffff; /* Default icon color */
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.socialIcon:hover {
+  transform: translateY(-10px) scale(1.2); /* Move up and enlarge on hover */
+  color: #01e646; /* Color change on hover */
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.socialIcon:hover {
+  animation: bounce 0.5s infinite alternate;
+  color: #01e646; /* Color changes to green on hover */
+}

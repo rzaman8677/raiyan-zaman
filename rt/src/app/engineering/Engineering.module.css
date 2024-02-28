@@ -1,0 +1,75 @@
+/* Engineering.module.css */
+.main {
+    padding: 4rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .section {
+    width: 100%;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+  }
+  
+  .textSection {
+    background: #f0f0f0; /* Light grey background */
+    color: #333; /* Dark grey text */
+    padding: 2rem;
+    margin: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    margin-bottom: 2rem;
+    transition: all 0.3s ease-in-out;
+    overflow-x: hidden;
+  }
+  
+  .textSection:hover {
+    transform: scale(1.05);
+  }
+  
+  .sliderContainer {
+    display: flex;
+    width: 100%;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 0 1rem;
+    overflow-x: hidden;
+    overflow-y: hidden;
+  }
+  
+  .slide {
+    min-width: 32.75%; /* Each slide takes up a third of the container width */
+    flex-grow: 0;
+    flex-shrink: 0;
+    object-fit: cover;
+    margin-right: 15px; /* Space between images */
+    border-radius: 8px;
+    transition: transform 0.5s ease-in-out;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+  }
+  
+  /* Add a hover effect on the slide */
+  .slide:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Responsive styling for smaller screens */
+  @media (max-width: 768px) {
+    .slide {
+      min-width: 100%; /* On small screens, show one image at a time */
+    }
+    
+    .textSection {
+      width: 90%; /* Adjust the text section width on smaller screens */
+    }
+  }
+  
+  /* Additional global styles and animations as needed */
+  
