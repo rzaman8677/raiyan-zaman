@@ -3,8 +3,8 @@ import React, { useEffect, useState } from "react";
 import Head from "next/head";
 import Image from "next/image"; // Import the Image component
 import styles from "./Home.module.css"; 
-import Footer from "./footer/page";
-import Navbar from "./navbar/page";
+import Footer from "@/app/footer/page";
+import Navbar from "@/app/navbar/page";
 
 
 export default function Home() {
