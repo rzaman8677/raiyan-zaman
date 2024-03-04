@@ -9,6 +9,10 @@
   margin-bottom: 2rem;
   color: #ece7e7;
   text-align: center;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 2rem;
+  border-radius: 8px;
+  border: #ece7e7 1px solid;
 }
 
 .workSection {
@@ -84,12 +88,14 @@
 
 .card {
   width: 45%;
-  background: #f7f7f78a;
+  background-color: rgba(0, 0, 0, 0.7);
   padding: 2rem;
   border-radius: 8px;
+  border: #ece7e7 1px solid;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
+  color: white;
 }
 
 .card:hover {
