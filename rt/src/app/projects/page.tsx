@@ -12,21 +12,44 @@ const WorkSection = () => {
   const [csImageIndex, setCsImageIndex] = useState(0);
   const [engImageIndex, setEngImageIndex] = useState(0);
 
-  const computerScienceImages = ["/images/11.webp", "/images/22.jpg","/images/11.webp", "/images/22.jpg",];
-  const engineeringRoboticsImages = ["/images/11.webp", "/images/22.jpg","/images/11.webp", "/images/22.jpg",];
+  const computerScienceImages = [
+    "/images/11.webp",
+    "/images/22.jpg",
+    "/images/11.webp",
+    "/images/22.jpg",
+  ];
+  const engineeringRoboticsImages = [
+    "/images/11.webp",
+    "/images/22.jpg",
+    "/images/11.webp",
+    "/images/22.jpg",
+  ];
 
-  const nextSlide = (setImageIndex: React.Dispatch<React.SetStateAction<number>>, length: number) => {
+  const nextSlide = (
+    setImageIndex: React.Dispatch<React.SetStateAction<number>>,
+    length: number
+  ) => {
     setImageIndex((currentIndex: number) => (currentIndex + 1) % length);
   };
-  
-  const prevSlide = (setImageIndex: React.Dispatch<React.SetStateAction<number>>, length: number) => {
-    setImageIndex((currentIndex: number) => (currentIndex - 1 + length) % length);
+
+  const prevSlide = (
+    setImageIndex: React.Dispatch<React.SetStateAction<number>>,
+    length: number
+  ) => {
+    setImageIndex(
+      (currentIndex: number) => (currentIndex - 1 + length) % length
+    );
   };
 
   return (
     <div className={styles.workContainer}>
       <Navbar />
-      <motion.h2 initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} className={styles.workTitle}>
+      <motion.h2
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        className={styles.workTitle}
+      >
         My Work
       </motion.h2>
 
@@ -35,17 +58,45 @@ const WorkSection = () => {
         <div className={styles.imageContainer}>
           {/* Navigation Buttons */}
           <div className={styles.sliderButtons}>
-            <button onClick={() => prevSlide(setCsImageIndex, computerScienceImages.length)} className={styles.button}>
+            <button
+              onClick={() =>
+                prevSlide(setCsImageIndex, computerScienceImages.length)
+              }
+              className={styles.button}
+            >
               <MdChevronLeft size={30} /> {/* Icon for Prev */}
             </button>
-            <button onClick={() => nextSlide(setCsImageIndex, computerScienceImages.length)} className={styles.button}>
+            <button
+              onClick={() =>
+                nextSlide(setCsImageIndex, computerScienceImages.length)
+              }
+              className={styles.button}
+            >
               <MdChevronRight size={30} /> {/* Icon for Next */}
             </button>
           </div>
-          <Image src={computerScienceImages[csImageIndex]} alt="Computer Science Project" layout="fill" objectFit="cover" />
+          <Image
+            src={computerScienceImages[csImageIndex]}
+            alt="Computer Science Project"
+            layout="fill"
+            objectFit="cover"
+          />
         </div>
-        <motion.div className={styles.textContainerWithBackground} initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, ease: "easeOut" }} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-          <Image src="/images/logo5.png" alt="Background" layout="fill" objectFit="cover" style={{ zIndex: -1 }} />
+        <motion.div
+          className={styles.textContainerWithBackground}
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+        >
+          <Image
+            src="/images/logo5.png"
+            alt="Background"
+            layout="fill"
+            objectFit="cover"
+            style={{ zIndex: -1 }}
+          />
           <a href="/computer-science" className={styles.textLink}>
             <p>Details about my computer science projects...</p>
           </a>
@@ -57,19 +108,47 @@ const WorkSection = () => {
         <div className={styles.imageContainer}>
           {/* Navigation Buttons */}
           <div className={styles.sliderButtons}>
-            <button onClick={() => prevSlide(setCsImageIndex, computerScienceImages.length)} className={styles.button}>
+            <button
+              onClick={() =>
+                prevSlide(setCsImageIndex, computerScienceImages.length)
+              }
+              className={styles.button}
+            >
               <MdChevronLeft size={30} /> {/* Icon for Prev */}
             </button>
-            <button onClick={() => nextSlide(setCsImageIndex, computerScienceImages.length)} className={styles.button}>
+            <button
+              onClick={() =>
+                nextSlide(setCsImageIndex, computerScienceImages.length)
+              }
+              className={styles.button}
+            >
               <MdChevronRight size={30} /> {/* Icon for Next */}
             </button>
           </div>
-          <Image src={engineeringRoboticsImages[engImageIndex]} alt="Engineering and Robotics Project" layout="fill" objectFit="cover" />
+          <Image
+            src={engineeringRoboticsImages[engImageIndex]}
+            alt="Engineering and Robotics Project"
+            layout="fill"
+            objectFit="cover"
+          />
         </div>
-        <motion.div className={styles.textContainerWithBackground} initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, ease: "easeOut" }} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-          <Image src="/images/logo5.png" alt="Background" layout="fill" objectFit="cover" style={{ zIndex: -1 }} />
+        <motion.div
+          className={styles.textContainerWithBackground}
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+        >
+          <Image
+            src="/images/logo5.png"
+            alt="Background"
+            layout="fill"
+            objectFit="cover"
+            style={{ zIndex: -1 }}
+          />
           <a href="/computer-science" className={styles.textLink}>
-            <p>Details about my computer science projects...</p>
+            <p>Details about my engineering projects...</p>
           </a>
         </motion.div>
       </div>
@@ -91,4 +170,3 @@ const WorkSection = () => {
 };
 
 export default WorkSection;
-
