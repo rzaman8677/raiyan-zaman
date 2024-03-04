@@ -4,22 +4,58 @@
   padding-top: 120px; /* Adjust the padding to avoid overlapping with the navbar */
 }
 
+.fixedBackground {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.backgroundImage {
+  object-fit: cover;
+}
+
+/* Ensure the rest of your main content has a higher z-index than the background */
+.mainContainer {
+  position: relative;
+  z-index: 1;
+  /* other styles */
+}
+
+/* About.module.css */
 .heroSection {
-  text-align: center;
-  padding: 150px 20px;
-  margin: 0 auto;
-  max-width: 80%;
-  background-color: #141b31; /* Dark blue background */
-  background-image: url("/images/hero-background.jpg");
-  border-radius: 0; /* Make it rectangular */
-  backdrop-filter: blur(5px);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-  transition: box-shadow 0.3s;
+  position: relative;
+  height: 500px; /* Adjust the height as needed */
+  text-align: center; /* Center text horizontally */
+  /* Remove display: grid; and place-items: center; */
+}
+
+.heroImageWrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.heroContent {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  color: white;
+}
+
+.heroImage {
+  object-fit: cover;
 }
 
 .heroSection:hover {
   box-shadow: 0 6px 24px rgba(168, 4, 4, 0.3);
-  /* Slight raise effect on hover */
 }
 
 .heroContent h1 {
@@ -36,6 +72,25 @@
     0.75
   ); /* Slightly lighter text for the paragraph */
   font-weight: 400;
+}
+
+.imageImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* Ensure the image covers the entire section */
+}
+
+.heroImageWrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.heroImage {
+  object-fit: cover;
+  /* Ensure the image covers the entire section */
 }
 
 .aboutMeSection,
@@ -107,7 +162,6 @@
   padding-right: 10%;
   padding-top: 5%;
   padding-bottom: 5%;
-  background-image: url("/images/text-content.jpg");
 }
 
 .textContent h2 {

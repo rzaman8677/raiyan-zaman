@@ -2,16 +2,17 @@
 import React from "react";
 import Head from "next/head";
 import Image from "next/image";
-import styles from "./About.module.css";
+import styles from "./About.module.css"; // Ensure this path matches your file structure
 import Footer from "../footer/page";
 import Navbar from "../navbar/page";
 import { motion } from "framer-motion";
 
+// Enhanced About component definition
 export default function About() {
-  // Better Khabib Quote
+  // Constant for Khabib Quote
   const khabibQuote = "The eagle does not catch flies. - Khabib Nurmagomedov";
 
-  // Hobbies and Interests
+  // List of hobbies and interests
   const hobbies = [
     "Basketball",
     "Building PCs",
@@ -25,6 +26,22 @@ export default function About() {
     "Researching and Modeling",
   ];
 
+  // Motion variants for animations
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { y: 20, opacity: 0 },
+    show: { y: 0, opacity: 1 },
+  };
+
   return (
     <div className={styles.mainContainer}>
       <Head>
@@ -35,29 +52,53 @@ export default function About() {
         />
       </Head>
       <Navbar />
+      {/* Background Image */}
+      <div className={styles.fixedBackground}>
+        <Image
+          src="/images/logo5.png"
+          alt="Background"
+          fill
+          quality={100}
+          className={styles.backgroundImage}
+        />
+      </div>
       <section className={styles.heroSection}>
+        <div className={styles.heroImageWrapper}>
+          <Image
+            src="/images/hero-background.jpg"
+            alt="Background"
+            fill // This uses the new 'fill' property in Next.js 13
+            className={styles.heroImage}
+          />
+        </div>
         <div className={styles.heroContent}>
           <h1>Welcome to My Journey</h1>
           <p>Discover more about me, my experiences, and what I do.</p>
         </div>
       </section>
-      <section className={styles.imageSection}>
+
+      {/* <motion.section
+        className={styles.imageSection}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.2 }}
+      >
         <div className={styles.imageWrapper}>
           <Image
             src="/images/rz.jpg"
             alt="Raiyan Zaman"
-            layout="fill"
-            objectFit="cover"
+            fill
+            className={styles.imageImage}
           />
         </div>
-      </section>
-      <section className={styles.aboutSection}>
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1 }}
-          className={styles.textContent}
-        >
+      </motion.section> */}
+      <motion.section
+        className={styles.aboutSection}
+        initial="hidden"
+        animate="show"
+        variants={containerVariants}
+      >
+        <motion.div variants={itemVariants} className={styles.textContent}>
           <h2>About Me</h2>
           <p>
             In the heart of the United States, where opportunity intersects with
@@ -86,14 +127,15 @@ export default function About() {
             transform the world.
           </p>
         </motion.div>
-      </section>
-      <section className={styles.storySection}>
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.5, duration: 1 }}
-          className={styles.textContent}
-        >
+      </motion.section>
+
+      <motion.section
+        className={styles.aboutSection}
+        initial="hidden"
+        animate="show"
+        variants={containerVariants}
+      >
+        <motion.div variants={itemVariants} className={styles.textContent}>
           <h2>My Story</h2>
           <p>
             A seminal experience that profoundly shaped my technological journey
@@ -114,21 +156,21 @@ export default function About() {
             during this tumultuous period that I drew inspiration from athletes
             and leaders known for their resilience and work ethic. Figures like
             Stephen Curry, Tom Brady, and particularly Khabib Nurmagomedov,
-            became beacons of perseverance. Khabib&apos;s philosophy of relentless
-            hard work, humility, and unwavering commitment to his craft in the
-            face of adversity resonated deeply with me. His journey taught me
-            that excellence is not just about achieving personal milestones but
-            about embodying values that inspire others.
+            became beacons of perseverance. Khabib&apos;s philosophy of
+            relentless hard work, humility, and unwavering commitment to his
+            craft in the face of adversity resonated deeply with me. His journey
+            taught me that excellence is not just about achieving personal
+            milestones but about embodying values that inspire others.
           </p>
         </motion.div>
-      </section>
-      <section className={styles.motivationSection}>
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1, duration: 1 }}
-          className={styles.textContent}
-        >
+      </motion.section>
+      <motion.section
+        className={styles.aboutSection}
+        initial="hidden"
+        animate="show"
+        variants={containerVariants}
+      >
+        <motion.div variants={itemVariants} className={styles.textContent}>
           <h2>My Motivation</h2>
           <p>
             The intersection of artificial intelligence and machine learning
@@ -148,12 +190,12 @@ export default function About() {
             opportunity serves as a constant reminder of the transformative
             power of technology. Inspired by the work ethic and resilience of
             the Bengali people, I am committed to leveraging technology as a
-            tool for empowerment and equity. Khabib&apos;s influence extends beyond
-            the octagon into my professional aspirations, where his embodiment
-            of leadership, integrity, and hard work serves as a guiding light.
-            It is this blend of technological passion, engineering ingenuity,
-            and a commitment to ethical leadership that I seek to bring to my
-            future endeavors.
+            tool for empowerment and equity. Khabib&apos;s influence extends
+            beyond the octagon into my professional aspirations, where his
+            embodiment of leadership, integrity, and hard work serves as a
+            guiding light. It is this blend of technological passion,
+            engineering ingenuity, and a commitment to ethical leadership that I
+            seek to bring to my future endeavors.
           </p>
           <p>
             y narrative is not just a chronicle of personal achievement but a
@@ -167,14 +209,15 @@ export default function About() {
             of purpose.
           </p>
         </motion.div>
-      </section>
-      <section className={styles.contactSection}>
-        <motion.div
-          initial={{ y: 30, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ ease: "easeOut", duration: 0.8 }}
-          className={styles.contactForm}
-        >
+      </motion.section>
+      {/* Repeat the structure for other sections like My Story, My Motivation, etc., using motion.div and container/item variants for animations */}
+      <motion.section
+        className={styles.contactSection}
+        initial="hidden"
+        animate="show"
+        variants={containerVariants}
+      >
+        <motion.div variants={itemVariants} className={styles.contactForm}>
           <h2>Contact Me</h2>
           <div className={styles.inputGroup}>
             <input type="text" placeholder="Your Name" required />
@@ -189,7 +232,7 @@ export default function About() {
             </motion.button>
           </div>
         </motion.div>
-      </section>
+      </motion.section>
       <Footer />
     </div>
   );

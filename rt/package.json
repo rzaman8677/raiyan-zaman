@@ -13,10 +13,11 @@
     "@fortawesome/free-brands-svg-icons": "^6.5.1",
     "@fortawesome/react-fontawesome": "^0.2.0",
     "aws-amplify": "^6.0.18",
-    "framer-motion": "^11.0.3",
+    "framer-motion": "^11.0.8",
     "next": "^14.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-icons": "^5.0.1",
     "react-intersection-observer": "^9.8.0",
     "swiper": "^11.0.6"
   },

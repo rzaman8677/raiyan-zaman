@@ -94,9 +94,9 @@
     position: absolute;
     top: 60px; /* Adjust based on navbar height */
     left: 0;
-    background-color: #df0000; /* Match the navbar color */
+    background-color: rgba(0, 0, 0, 0.7);
     padding: 1rem;
-    border-top: 2px solid #01e646; /* Highlighted border top */
+    border-top: 2px solid #016ce6c5; /* Highlighted border top */
     z-index: 100000;
   }
 
