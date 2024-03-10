@@ -28,18 +28,10 @@
 .heroSection {
   position: relative;
   height: 500px; /* Adjust the height as needed */
-  text-align: center; /* Center text horizontally */
-  /* Remove display: grid; and place-items: center; */
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
-.heroImageWrapper {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-}
 
 .heroContent {
   position: absolute;
@@ -157,7 +149,7 @@
   text-align: center;
   margin: 0 auto;
   line-height: 2; /* Increased line height for better readability */
-  background-color: #141b31;
+  background-color: rgba(20, 27, 49, 0.8);
   padding-left: 10%;
   padding-right: 10%;
   padding-top: 5%;

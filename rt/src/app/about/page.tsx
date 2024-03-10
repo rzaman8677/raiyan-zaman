@@ -63,14 +63,6 @@ export default function About() {
         />
       </div>
       <section className={styles.heroSection}>
-        <div className={styles.heroImageWrapper}>
-          <Image
-            src="/images/hero-background.jpg"
-            alt="Background"
-            fill
-            className={styles.heroImage}
-          />
-        </div>
         <div className={styles.heroContent}>
           <h1>Welcome to My Journey</h1>
           <p>Discover more about me, my experiences, and what I do.</p>
