@@ -1,152 +1,111 @@
 "use client";
-import React, { useState, useEffect } from "react";
+// pages/index.js or pages/engineering.js
+
+import React from "react";
 import Head from "next/head";
-import { AnimatePresence, motion } from "framer-motion";
 import styles from "./Engineering.module.css";
-
-interface ImageIndexState {
-  [key: string]: number;
-}
-
+import Image from "next/image";
+import Footer from "../footer/page";
+import Navbar from "../navbar/page";
+const images = [
+  // Assuming you have images in your public folder or an external source
+  { src: "/images/rz2.jpg", type: "landscape" },
+  { src: "/images/11.webp", type: "landscape" },
+  { src: "/images/logo5.png", type: "landscape" },
+  { src: "/images/raiyan.png", type: "portrait" },
+  { src: "/images/rz2.jpg", type: "landscape" },
+  { src: "/images/11.webp", type: "landscape" },
+  { src: "/images/logo5.png", type: "landscape" },
+  { src: "/images/logo5.png", type: "landscape" },
+  { src: "/images/logo5.png", type: "landscape" },
+  { src: "/images/logo5.png", type: "landscape" },
+  // Add all your 30 images paths here
+];
 const EngineeringPage = () => {
-  const [imageIndex, setImageIndex] = useState<ImageIndexState>({
-    ftcRobotProject: 0,
-    umdMindlabsBreathingProject: 0,
-    umbcComputerEngineeringInternship: 0,
-    clawBotProjectForPltw: 0,
-    autonomousRobotDesignProject: 0,
-  });
-
-  const projectImages = {
-    ftcRobotProject: ["/images/11.webp", "/images/11.webp", "/images/11.webp", "/images/11.webp", "/images/22.jpg"],
-    umdMindlabsBreathingProject: [
-    ],
-    umbcComputerEngineeringInternship: [
-    ],
-    clawBotProjectForPltw: [
-    ],
-    autonomousRobotDesignProject: [
-    ],
-  };
-
-  useEffect(() => {
-    interface ProjectImages {
-      [key: string]: string[];
-    }
-
-    const projectImages: ProjectImages = {
-      ftcRobotProject: ["/images/11.webp", "/images/11.webp", "/images/11.webp", "/images/11.webp", "/images/22.jpg"],
-      umdMindlabsBreathingProject: [],
-      umbcComputerEngineeringInternship: [],
-      clawBotProjectForPltw: [],
-      autonomousRobotDesignProject: [],
-    };
-
-    const intervalIds: { [key: string]: NodeJS.Timeout } = {};
-    (Object.keys(projectImages) as (keyof typeof projectImages)[]).forEach((projectKey) => {
-      intervalIds[projectKey] = setInterval(() => {
-        setImageIndex((prevIndices) => {
-          // Ensure that projectKey is a keyof projectImages
-          const key = projectKey as keyof typeof prevIndices;
-          const newIndex = (prevIndices[key] + 1) % projectImages[key].length;
-          return {
-            ...prevIndices,
-            [key]: newIndex,
-          };
-        });
-      }, 3000); // Rotate images every 3 seconds
-    });
-  
-    return () => {
-      Object.keys(intervalIds).forEach((intervalId) => clearInterval(intervalIds[intervalId as keyof typeof intervalIds]));
-    };
-  }, []);
-  
-
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        when: "beforeChildren",
-        staggerChildren: 0.3,
-      },
-    },
-  };
-
-  const itemVariants = {
-    hidden: { y: 20, opacity: 0 },
-    visible: { y: 0, opacity: 1 },
-  };
-
   return (
-    <div>
+    <>
+      <Navbar />
+      {/* Background Image */}
+      <div className={styles.fixedBackground}>
+        <Image
+          src="/images/logo5.png"
+          alt="Background"
+          fill
+          quality={100}
+          className={styles.backgroundImage}
+        />
+      </div>
       <Head>
-        <title>Raiyan Zaman&apos;s Engineering Portfolio</title>
+        <title>Engineering Accomplishments</title>
+        <meta
+          name="description"
+          content="Portfolio showcasing my engineering accomplishments"
+        />
+        {/* Add any other head elements here */}
       </Head>
 
       <main className={styles.main}>
-        {Object.entries(projectImages).map(([projectKey, images]) => (
-          <motion.section
-            key={projectKey}
-            className={styles.section}
-            variants={containerVariants}
-            initial="hidden"
-            animate="visible"
-          >
-            <motion.div className={styles.textSection} variants={itemVariants}>
-              {/* Conditional rendering for each project title and description */}
-              {projectKey === "ftcRobotProject" && (
-                <div>
-                  <h2>FTC Robot Project - Cryptic#20123</h2>
-                  <p>FTC project placeholder...</p>
+        <h1 className={styles.title}>My Engineering Portfolio</h1>
+
+        <section className={styles.accomplishments}>
+          {/* Robotics Section */}
+          <div className={styles.card}>
+            <h2>Robotics</h2>
+            <p>
+              Detail my accomplishments in robotics, competitions, and
+              projects you have worked on.
+            </p>
+          </div>
+
+          {/* PLTW Section */}
+          <div className={styles.card}>
+            <h2>Project Lead The Way (PLTW)</h2>
+            <p>Describe my experience and projects with PLTW.</p>
+          </div>
+
+          {/* UMBC ITE Section */}
+          <div className={styles.card}>
+            <h2>UMBC ITE</h2>
+            <p>
+              Discuss my involvement with UMBC Information
+              Technology/Engineering programs.
+            </p>
+          </div>
+
+          {/* Outside of School */}
+          <div className={styles.card}>
+            <h2>Personal Projects</h2>
+            <p>
+              Discuss my accomplishments with your personal projects.
+            </p>
+          </div>
+        </section>
+
+        <section className={styles.imageGallery}>
+          <h2 className={styles.galleryTitle}>Gallery</h2>
+          <div className={styles.grid}>
+            {images.map((image, index) => {
+              // Inline style for grid row span based on image type
+              const style =
+                image.type === "portrait" ? { gridRow: "span 2" } : {};
+
+              return (
+                <div key={index} className={styles.imageWrapper} style={style}>
+                  <Image
+                    src={image.src}
+                    alt={`Engineering Project ${index + 1}`}
+                    className={styles.responsiveImage}
+                    width={500}
+                    height={400}
+                  />
                 </div>
-              )}
-              {projectKey === "umdMindlabsBreathingProject" && (
-                <div>
-                  <h2>UMD Mindlabs - Breathing Analysis Project</h2>
-                  <p>Mindlabs project placeholder...</p>
-                </div>
-              )}
-              {projectKey === "umbcComputerEngineeringInternship" && (
-                <div>
-                  <h2>UMBC Computer Engineering Internship</h2>
-                  <p>UMBC internship placeholder...</p>
-                </div>
-              )}
-              {projectKey === "clawBotProjectForPltw" && (
-                <div>
-                  <h2>Claw Bot Project for PLTW</h2>
-                  <p>Claw Bot project placeholder...</p>
-                </div>
-              )}
-              {projectKey === "autonomousRobotDesignProject" && (
-                <div>
-                  <h2>Autonomous Robot Design</h2>
-                  <p>Autonomous robot project placeholder...</p>
-                </div>
-              )}
-            </motion.div>
-            <div className={styles.sliderContainer}>
-              <AnimatePresence>
-                {images
-                  .slice(imageIndex[projectKey], imageIndex[projectKey] + 3)
-                  .map((img, idx) => (
-                    <motion.img
-                      key={`${projectKey}-${idx}`}
-                      src={img}
-                      alt={`${projectKey} image ${idx}`}
-                      className={styles.slide}
-                      variants={itemVariants}
-                      // Ensuring that the key is unique for each image
-                    />
-                  ))}
-              </AnimatePresence>
-            </div>
-          </motion.section>
-        ))}
+              );
+            })}
+          </div>
+        </section>
       </main>
-    </div>
+      <Footer />
+    </>
   );
 };
 

@@ -1,75 +1,129 @@
-/* Engineering.module.css */
+/* styles/Engineering.module.css */
+
 .main {
-    padding: 4rem 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
+  padding: 4rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.fixedBackground {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.backgroundImage {
+  object-fit: cover;
+}
+
+.title {
+  margin: 0;
+  line-height: 1.15;
+  font-size: 4rem;
+  text-align: center;
+}
+
+.accomplishments {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 3rem;
+}
+
+.card {
+  margin: 1rem;
+  flex-basis: 45%;
+  padding: 1.5rem;
+  text-align: left;
+  color: inherit;
+  text-decoration: none;
+  border: 1px solid #eaeaea;
+  border-radius: 10px;
+  transition: color 0.15s ease, border-color 0.15s ease;
+  box-shadow: 0 4px 14px 0 rgba(0, 0, 0, 0.25);
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.card:hover,
+.card:focus,
+.card:active {
+  color: #0070f3;
+  border-color: #0070f3;
+}
+
+.card h2 {
+  margin: 0 0 1rem 0;
+  font-size: 1.5rem;
+}
+
+.card p {
+  margin: 0;
+  font-size: 1.25rem;
+  line-height: 1.5;
+}
+
+@media (max-width: 950px) { /* Adjust this value based on your design's breakpoint */
+  .card {
+    flex-basis: calc(100% - 2rem); /* Takes full width minus margin */
   }
-  
-  .section {
-    width: 100%;
-    margin-bottom: 2rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    overflow: hidden;
+}
+
+/* styles/Gallery.module.css */
+
+.imageGallery {
+  text-align: center;
+  padding: 3rem 0;
+}
+
+.galleryTitle {
+  font-size: 2rem;
+  color: #d1cdcd;
+  margin-bottom: 2rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Now 4 images per row */
+  gap: 10px;
+}
+
+.imageWrapper {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* Landscape images now will automatically take up the height needed */
+.landscape {
+  grid-row: span 1;
+}
+
+/* Portrait images will span across two landscape images in height */
+.portrait {
+  grid-row: span 3;
+}
+
+.responsiveImage {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Add responsive styles if needed */
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(
+      2,
+      1fr
+    ); /* Adjust the number of columns for smaller screens */
   }
-  
-  .textSection {
-    background: #f0f0f0; /* Light grey background */
-    color: #333; /* Dark grey text */
-    padding: 2rem;
-    margin: 1rem;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 80%;
-    margin-bottom: 2rem;
-    transition: all 0.3s ease-in-out;
-    overflow-x: hidden;
-  }
-  
-  .textSection:hover {
-    transform: scale(1.05);
-  }
-  
-  .sliderContainer {
-    display: flex;
-    width: 100%;
-    overflow-x: auto;
-    scroll-behavior: smooth;
-    padding: 0 1rem;
-    overflow-x: hidden;
-    overflow-y: hidden;
-  }
-  
-  .slide {
-    min-width: 32.75%; /* Each slide takes up a third of the container width */
-    flex-grow: 0;
-    flex-shrink: 0;
-    object-fit: cover;
-    margin-right: 15px; /* Space between images */
-    border-radius: 8px;
-    transition: transform 0.5s ease-in-out;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    cursor: pointer;
-  }
-  
-  /* Add a hover effect on the slide */
-  .slide:hover {
-    transform: scale(1.1);
-  }
-  
-  /* Responsive styling for smaller screens */
-  @media (max-width: 768px) {
-    .slide {
-      min-width: 100%; /* On small screens, show one image at a time */
-    }
-    
-    .textSection {
-      width: 90%; /* Adjust the text section width on smaller screens */
-    }
-  }
-  
-  /* Additional global styles and animations as needed */
-  
+}

@@ -14,7 +14,7 @@
 }
 
 .navbar.scrolled {
-  background-color: #0f1624; /* Slightly darker to indicate scroll */
+  background-color: rgba(0, 0, 0, 0.8);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
