@@ -67,7 +67,7 @@ export default function About() {
           <Image
             src="/images/hero-background.jpg"
             alt="Background"
-            fill // This uses the new 'fill' property in Next.js 13
+            fill
             className={styles.heroImage}
           />
         </div>
