@@ -44,7 +44,7 @@ const Navbar = () => {
           </a>
         </li>
         <li>
-          <a href="#contact" className={styles.navLink} onClick={() => setIsNavExpanded(false)}>
+          <a href="contact" className={styles.navLink} onClick={() => setIsNavExpanded(false)}>
             Contact
           </a>
         </li>

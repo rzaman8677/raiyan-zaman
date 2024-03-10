@@ -79,7 +79,7 @@ const WorkSection = () => {
             src={computerScienceImages[csImageIndex]}
             alt="Computer Science Project"
             fill
-            style={{  objectFit: "cover"  }}
+            style={{ objectFit: "cover" }}
           />
         </div>
         <motion.div
@@ -94,7 +94,7 @@ const WorkSection = () => {
             src="/images/logo5.png"
             alt="Background"
             fill
-            style={{ zIndex: -1, objectFit: "cover"  }}
+            style={{ zIndex: -1, objectFit: "cover" }}
           />
           <a href="/computer-science" className={styles.textLink}>
             <p>Details about my computer science projects...</p>
@@ -128,7 +128,7 @@ const WorkSection = () => {
             src={engineeringRoboticsImages[engImageIndex]}
             alt="Engineering and Robotics Project"
             fill
-            style={{ objectFit: "cover"  }}
+            style={{ objectFit: "cover" }}
           />
         </div>
         <motion.div
@@ -143,7 +143,7 @@ const WorkSection = () => {
             src="/images/logo5.png"
             alt="Background"
             fill
-            style={{ zIndex: -1, objectFit: "cover"  }}
+            style={{ zIndex: -1, objectFit: "cover" }}
           />
           <a href="/engineering" className={styles.textLink}>
             <p>Details about my engineering projects...</p>
