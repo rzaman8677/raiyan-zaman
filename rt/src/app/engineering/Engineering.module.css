@@ -70,9 +70,10 @@
   padding-bottom: 5%;
 }
 
-@media (max-width: 950px) { /* Adjust this value based on your design's breakpoint */
+@media (max-width: 950px) {
+  /* Adjust this value based on your design's breakpoint */
   .card {
-    flex-basis: calc(100% - 2rem); /* Takes full width minus margin */
+    flex-basis: calc(100% - 0.5rem); /* Takes full width minus margin */
   }
 }
 
