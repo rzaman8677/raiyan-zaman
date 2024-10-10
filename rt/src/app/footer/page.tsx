@@ -9,7 +9,7 @@ const Footer = () => (
     <div className={styles.footer}>
       <div className={styles.socialLinks}>
         <a
-          href="https://youtube.com"
+          href="https://www.youtube.com/@RaiyanRadiZaman"
           target="_blank"
           rel="noopener noreferrer"
           className={styles.socialIcon}
@@ -17,7 +17,7 @@ const Footer = () => (
           <FontAwesomeIcon icon={faYoutube} />
         </a>
         <a
-          href="https://tiktok.com"
+          href="https://www.tiktok.com/@isldw"
           target="_blank"
           rel="noopener noreferrer"
           className={styles.socialIcon}
@@ -25,7 +25,7 @@ const Footer = () => (
           <FontAwesomeIcon icon={faTiktok} />
         </a>
         <a
-          href="https://linkedin.com"
+          href="https://www.linkedin.com/in/raiyan-zaman-a94653269"
           target="_blank"
           rel="noopener noreferrer"
           className={styles.socialIcon}
@@ -33,7 +33,7 @@ const Footer = () => (
           <FontAwesomeIcon icon={faLinkedin} />
         </a>
         <a
-          href="https://github.com"
+          href="https://github.com/rzaman8677"
           target="_blank"
           rel="noopener noreferrer"
           className={styles.socialIcon}

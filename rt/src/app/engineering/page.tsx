@@ -8,18 +8,70 @@ import Image from "next/image";
 import Footer from "../footer/page";
 import Navbar from "../navbar/page";
 const images = [
-  // Assuming you have images in your public folder or an external source
-  { src: "/images/rz2.jpg", type: "landscape" },
-  { src: "/images/11.webp", type: "landscape" },
-  { src: "/images/logo5.png", type: "landscape" },
-  { src: "/images/raiyan.png", type: "portrait" },
-  { src: "/images/rz2.jpg", type: "landscape" },
-  { src: "/images/11.webp", type: "landscape" },
-  { src: "/images/logo5.png", type: "landscape" },
-  { src: "/images/logo5.png", type: "landscape" },
-  { src: "/images/logo5.png", type: "landscape" },
-  { src: "/images/logo5.png", type: "landscape" },
-  // Add all your 30 images paths here
+  { src: "/images/engineering/1.webp", type: "landscape" },
+  { src: "/images/engineering/2.webp", type: "landscape" },
+  { src: "/images/engineering/3.webp", type: "landscape" },
+  { src: "/images/engineering/4.webp", type: "landscape" },
+  { src: "/images/engineering/5.webp", type: "landscape" },
+  { src: "/images/engineering/6.webp", type: "landscape" },
+  { src: "/images/engineering/7.webp", type: "landscape" },
+  { src: "/images/engineering/8.webp", type: "landscape" },
+  { src: "/images/engineering/9.webp", type: "landscape" },
+  { src: "/images/engineering/10.webp", type: "landscape" },
+  { src: "/images/engineering/11.webp", type: "landscape" },
+  { src: "/images/engineering/12.webp", type: "landscape" },
+  { src: "/images/engineering/13.webp", type: "landscape" },
+  { src: "/images/engineering/14.webp", type: "landscape" },
+  { src: "/images/engineering/15.webp", type: "landscape" },
+  { src: "/images/engineering/16.webp", type: "landscape" },
+  { src: "/images/engineering/17.webp", type: "landscape" },
+  { src: "/images/engineering/18.webp", type: "landscape" },
+  { src: "/images/engineering/19.webp", type: "landscape" },
+  { src: "/images/engineering/20.webp", type: "landscape" },
+  { src: "/images/engineering/21.webp", type: "landscape" },
+  { src: "/images/engineering/22.webp", type: "landscape" },
+  { src: "/images/engineering/23.webp", type: "landscape" },
+  { src: "/images/engineering/24.webp", type: "landscape" },
+  { src: "/images/engineering/25.webp", type: "landscape" },
+  { src: "/images/engineering/26.webp", type: "landscape" },
+  { src: "/images/engineering/27.webp", type: "landscape" },
+  { src: "/images/engineering/28.webp", type: "landscape" },
+  { src: "/images/engineering/29.webp", type: "landscape" },
+  { src: "/images/engineering/30.webp", type: "landscape" },
+  { src: "/images/engineering/31.webp", type: "landscape" },
+  { src: "/images/engineering/32.webp", type: "landscape" },
+  { src: "/images/engineering/33.webp", type: "landscape" },
+  { src: "/images/engineering/34.webp", type: "landscape" },
+  { src: "/images/engineering/35.webp", type: "landscape" },
+  { src: "/images/engineering/36.webp", type: "landscape" },
+  { src: "/images/engineering/37.webp", type: "landscape" },
+  { src: "/images/engineering/38.webp", type: "landscape" },
+  { src: "/images/engineering/39.webp", type: "landscape" },
+  { src: "/images/engineering/40.webp", type: "landscape" },
+  { src: "/images/engineering/41.webp", type: "landscape" },
+  { src: "/images/engineering/42.webp", type: "landscape" },
+  { src: "/images/engineering/43.webp", type: "landscape" },
+  { src: "/images/engineering/44.webp", type: "landscape" },
+  { src: "/images/engineering/45.webp", type: "landscape" },
+  { src: "/images/engineering/46.webp", type: "landscape" },
+  { src: "/images/engineering/47.webp", type: "landscape" },
+  { src: "/images/engineering/48.webp", type: "landscape" },
+  { src: "/images/engineering/49.webp", type: "landscape" },
+  { src: "/images/engineering/50.webp", type: "landscape" },
+  { src: "/images/engineering/51.webp", type: "landscape" },
+  { src: "/images/engineering/52.webp", type: "landscape" },
+  { src: "/images/engineering/53.webp", type: "landscape" },
+  { src: "/images/engineering/54.webp", type: "landscape" },
+  { src: "/images/engineering/55.webp", type: "landscape" },
+  { src: "/images/engineering/56.webp", type: "landscape" },
+  { src: "/images/engineering/57.webp", type: "landscape" },
+  { src: "/images/engineering/58.webp", type: "landscape" },
+  { src: "/images/engineering/59.webp", type: "landscape" },
+  { src: "/images/engineering/60.webp", type: "landscape" },
+  { src: "/images/engineering/61.webp", type: "landscape" },
+  { src: "/images/engineering/62.webp", type: "landscape" },
+  { src: "/images/engineering/63.webp", type: "landscape" },
+  { src: "/images/engineering/64.webp", type: "landscape" },
 ];
 const EngineeringPage = () => {
   return (
@@ -192,6 +244,9 @@ const EngineeringPage = () => {
                     className={styles.responsiveImage}
                     width={500}
                     height={400}
+                    layout="responsive"
+                    loading="lazy" // Lazy loading to improve performance
+                    quality={75} // Adjusting quality for better performance
                   />
                 </div>
               );

@@ -9,16 +9,9 @@ import Footer from "../footer/page";
 import Navbar from "../navbar/page";
 const images = [
   // Assuming you have images in your public folder or an external source
-  { src: "/images/rz2.jpg", type: "landscape" },
-  { src: "/images/11.webp", type: "landscape" },
-  { src: "/images/logo5.png", type: "landscape" },
-  { src: "/images/raiyan.png", type: "portrait" },
-  { src: "/images/rz2.jpg", type: "landscape" },
-  { src: "/images/11.webp", type: "landscape" },
-  { src: "/images/logo5.png", type: "landscape" },
-  { src: "/images/logo5.png", type: "landscape" },
-  { src: "/images/logo5.png", type: "landscape" },
-  { src: "/images/logo5.png", type: "landscape" },
+  { src: "/images/computer-science/1.webp", type: "landscape" },
+  { src: "/images/computer-science/2.webp", type: "landscape" },
+  { src: "/images/computer-science/3.webp", type: "landscape" },
   // Add all your 30 images paths here
 ];
 const ComputerScience = () => {

@@ -2,13 +2,14 @@
 import React, { useEffect, useState } from "react";
 import Head from "next/head";
 import Image from "next/image"; // Import the Image component
+import Link from "next/link";
 import styles from "./Home.module.css"; 
 import Footer from "@/app/footer/page";
 import Navbar from "@/app/navbar/page";
 
 
 export default function Home() {
-  const words = ["Developer", "Designer", "Innovator", "Creator", "Enthusiast", "Student", "Leader", "Bengali", "US Citizen"];
+  const words = ["a Developer", "a Designer", "an Innovator", "a Creator", "an Enthusiast", "a Student", "a Leader", "a Bengali"];
   const [index, setIndex] = useState(0);
   const [subIndex, setSubIndex] = useState(0);
   const [reverse, setReverse] = useState(false);
@@ -45,29 +46,25 @@ export default function Home() {
 
   return (
     <div className={styles.mainContainer}>
-      <Head>
-        <link
-          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;900&display=swap"
-          rel="stylesheet"
-        />
-      </Head>
       <Navbar />
       <div className={styles.container}>
         <div className={styles.content}>
           <p className={styles.name}>Hi, my name is</p>
           <p className={styles.title}>Raiyan Zaman.</p>
           <p className={styles.subtitle}>
-            I am a{" "}
+            I am {" "}
             <span className={styles.typing}>
               {words[index].substring(0, subIndex)}
             </span>
             <span className={styles.blinker}>|</span>
           </p>
-          <button className={styles.button}>Contact Me</button>
+          <Link href="/contact" passHref>
+            <button className={styles.button}>Contact Me</button>
+          </Link>
         </div>
         <div className={styles.imageContainer}>
           <Image
-            src="/images/raiyan2.png" // Ensure this is the correct path
+            src="/images/raiyanzaman.png" // Ensure this is the correct path
             alt="Raiyan Zaman"
             className={styles.heroImage} // Apply your CSS class for styling
             fill // Use 'fill' and control the size with CSS

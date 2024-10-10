@@ -2,6 +2,9 @@
   padding: 4rem 0;
   color: #333;
   overflow-y: hidden;
+  background-image: url("/images/logo5.png");
+  background-size: cover;
+  background-position: center;
 }
 
 .workTitle {
@@ -11,8 +14,8 @@
   text-align: center;
   background-color: rgba(0, 0, 0, 0.7);
   padding: 2rem;
-  border-radius: 8px;
-  border: #ece7e7 1px solid;
+  /* border-radius: 0px;
+  border: #ece7e7 1px solid; */
 }
 
 .workSection {
@@ -20,6 +23,10 @@
   justify-content: space-between;
   margin-bottom: 2rem;
   position: relative;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  z-index: 1000;
+  border: #ece7e7 5px solid;
 }
 
 .imageContainer {
@@ -60,7 +67,7 @@
   right: 10px;
   display: flex;
   justify-content: space-between;
-  z-index: 10;
+  z-index: 100;
 }
 
 .button {

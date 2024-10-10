@@ -13,16 +13,17 @@ const WorkSection = () => {
   const [engImageIndex, setEngImageIndex] = useState(0);
 
   const computerScienceImages = [
-    "/images/11.webp",
-    "/images/22.jpg",
-    "/images/11.webp",
-    "/images/22.jpg",
+    "/images/computer-science/1.webp",
+    "/images/computer-science/2.webp",
+    "/images/computer-science/3.webp",
   ];
   const engineeringRoboticsImages = [
-    "/images/11.webp",
-    "/images/22.jpg",
-    "/images/11.webp",
-    "/images/22.jpg",
+    "/images/engineering/1.webp",
+    "/images/engineering/21.webp",
+    "/images/engineering/24.webp",
+    "/images/engineering/33.webp",
+    "/images/engineering/25.webp",
+    "/images/engineering/64.webp",
   ];
 
   const nextSlide = (
@@ -109,7 +110,7 @@ const WorkSection = () => {
           <div className={styles.sliderButtons}>
             <button
               onClick={() =>
-                prevSlide(setCsImageIndex, computerScienceImages.length)
+                prevSlide(setEngImageIndex, engineeringRoboticsImages.length)
               }
               className={styles.button}
             >
@@ -117,7 +118,7 @@ const WorkSection = () => {
             </button>
             <button
               onClick={() =>
-                nextSlide(setCsImageIndex, computerScienceImages.length)
+                nextSlide(setEngImageIndex, engineeringRoboticsImages.length)
               }
               className={styles.button}
             >
