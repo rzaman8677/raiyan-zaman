@@ -126,30 +126,10 @@ export default function About() {
         <motion.div variants={itemVariants} className={styles.textContent}>
           <h2>About Me</h2>
           <p>
-            In the heart of the United States, where opportunity intersects with
-            a mosaic of cultures, my journey into the expansive universe of
-            technology began. This path, while seemingly digital and futuristic,
-            is deeply rooted in the values and work ethic inherited from my
-            Bengali heritage. My early encounter with technology, specifically
-            through learning Python in second grade, was not merely an academic
-            endeavor; it was a beacon of hope during times when traditional
-            learning paradigms seemed to constrain my creative and analytical
-            propensities. This period of struggle was transformative, teaching
-            me that in the digital syntax of programming lay a powerful medium
-            for expression and problem-solving.
+          In the heart of the United States, where opportunity meets a rich blend of cultures, my journey into the world of technology took shape. This is a journey, though seeming to be modern and digital, which has been well rooted in values and work ethic inherited from Bengali culture. My first exposure to technology came in the second grade, when I was introduced to Python—not just as a subject in the academic curriculum but also as an inspiration during a time when conventional education often suppressed my creativity and analytical thinking. This challenging phase proved to be a turning point, demonstrating how the language of programming could serve as a powerful medium for self-expression and problem-solving.
           </p>
           <p>
-            The role of technology in my life swiftly transcended beyond leisure
-            and academic requirements; it became a means of service. I was often
-            found troubleshooting and repairing malfunctioning gadgets within my
-            household, a testament to my burgeoning role as a problem solver.
-            This innate drive to understand, dismantle, and reconstruct not only
-            electronic devices but also complex software systems paved the way
-            for a deeper exploration into the realms of computer science and
-            engineering. The convergence of these fields, I learned, is where
-            true innovation lies—combining the logical structure of coding with
-            the tangible impact of engineering to create solutions that can
-            transform the world.
+          Soon enough, technology became more than just a means of having fun or doing school; it became a way in which I could help people. Often, I was the sole person in my family who would fix broken devices, an occupation that branded me as a natural problem solver. I was curious enough to dive deeper: taking things apart and putting them back together, from gadgets to intricate software systems. This hands-on exploration opened the door to Computer Science and Engineering, where I discovered true innovation happens between these two fields. It is where the logical precision of coding meets the practical impact of engineering—developing solutions that can truly change lives.
           </p>
         </motion.div>
       </motion.section>
@@ -163,29 +143,10 @@ export default function About() {
         <motion.div variants={itemVariants} className={styles.textContent}>
           <h2>My Story</h2>
           <p>
-            A seminal experience that profoundly shaped my technological journey
-            was my visit to a robotics lab at Virginia Tech. The seamless
-            integration of software with hardware to breathe life into inanimate
-            objects was nothing short of revelatory. It expanded my horizon
-            beyond the confines of standalone software development into the
-            intricate ballet of robotics and engineering. This epiphany was not
-            just about the allure of robotics; it was a gateway to understanding
-            the symbiotic relationship between code and the physical world, a
-            harmony that could lead to innovations like autonomous vehicles and
-            intelligent systems.
+          One experience that greatly influenced my journey in technology was visiting a robotics laboratory at Virginia Tech. Watching how software and hardware come together to animate machines was definitely eye-opening. This experience really opened my eyes beyond just software development and introduced me to the fascinating world of robotics and engineering. It passed astonishment regarding robotics and let me get to understand how truly complex the relationship was between the code and physical world—but that can deliver the magic of self-driving cars and intelligent systems.
           </p>
           <p>
-            However, my journey was not devoid of challenges. As I delved deeper
-            into what was perceived by many as an esoteric pursuit, I
-            encountered skepticism and even ridicule from my peers. It was
-            during this tumultuous period that I drew inspiration from athletes
-            and leaders known for their resilience and work ethic. Figures like
-            Stephen Curry, Tom Brady, and particularly Khabib Nurmagomedov,
-            became beacons of perseverance. Khabib&apos;s philosophy of
-            relentless hard work, humility, and unwavering commitment to his
-            craft in the face of adversity resonated deeply with me. His journey
-            taught me that excellence is not just about achieving personal
-            milestones but about embodying values that inspire others.
+          My journey was not without obstacles. The more I delved into what many considered an unusual or overly complicated pursuit, the more I faced doubt and even ridicule from my peers. During this challenging time, I found inspiration in the resilience and work ethic of athletes and leaders that I looked up to. Guys like Stephen Curry, Tom Brady, and especially Khabib Nurmagomedov became role models for me in perseverance. Khabib&apos;s philosophy of relentless hard work, humility, and unwavering dedication in the face of adversity hit very close to home for me. He taught the lesson that true excellence far exceeds personal accomplishments; rather, it encompasses values imbued in one&apos;s person, which serve to inspire others.
           </p>
         </motion.div>
       </motion.section>
@@ -198,40 +159,13 @@ export default function About() {
         <motion.div variants={itemVariants} className={styles.textContent}>
           <h2>My Motivation</h2>
           <p>
-            The intersection of artificial intelligence and machine learning
-            with the foundational principles of computer science and engineering
-            has been a significant catalyst in my evolution from a technology
-            enthusiast to an innovator. The transformative potential of these
-            combined disciplines, particularly in the domain of autonomous
-            vehicles, represents not just the pinnacle of engineering
-            achievement but a conduit for positive societal change. My ambition
-            in this field is fueled by a desire to lead by example, to innovate
-            responsibly, and to develop solutions that prioritize the welfare
-            and advancement of humanity.
+          The intersection of artificial intelligence and machine learning with the basics of computer science and engineering has really made a huge difference in how I&apos;ve grown from just a fan of technology to an innovator. The possibilities within these fields, specifically in the area of autonomous vehicles, are far more than just a technical achievement; it&apos;s a chance to affect real change in society. This desire comes as a result of commitment to the leadership and care in innovations, while developing solutions to emphasize human well-being and advancement.
           </p>
           <p>
-            This motivation is further amplified by my experiences in
-            Bangladesh, where the stark contrast between potential and
-            opportunity serves as a constant reminder of the transformative
-            power of technology. Inspired by the work ethic and resilience of
-            the Bengali people, I am committed to leveraging technology as a
-            tool for empowerment and equity. Khabib&apos;s influence extends
-            beyond the octagon into my professional aspirations, where his
-            embodiment of leadership, integrity, and hard work serves as a
-            guiding light. It is this blend of technological passion,
-            engineering ingenuity, and a commitment to ethical leadership that I
-            seek to bring to my future endeavors.
+          My experiences in Bangladesh have been life-altering. The experiences I went through there underlined how immense the gap between potentiality and opportunity really was, and these are lessons one can never forget. Motivated anew by the resilience and the hardworking nature that epitomize the spirit of the Bengali people, I am driven toward action in using technology for this empowerment and equity. The influence of Khabib is not only with the accomplishments in the octagon but with the leadership, integrity, and hard work he showed, which was a very good example to follow. It&apos;s a synthesis of technological enthusiasm, engineering ingenuity, and dedication to ethical leadership that I try to put into everything I will do henceforth.
           </p>
           <p>
-            y narrative is not just a chronicle of personal achievement but a
-            testament to the power of technology, engineering, and computer
-            science as forces for good. It is a commitment to being a leader
-            who, like Khabib, champions hard work, inspires change, and embodies
-            the values of integrity and respect. As I continue to explore the
-            frontiers of computer science and engineering, my goal remains to
-            innovate in ways that bridge gaps, enhance lives, and inspire the
-            next generation to pursue their passions with dedication and a sense
-            of purpose.
+          My story goes beyond personal achievements; it is a testimony to the potential of technology, engineering, and computer science as powerful forces for good. I am committed to taking up leadership that, like Khabib, reflects hard work, honor, and respect and brings about positive change. As I continue to push the frontiers of computer science and engineering, I hope to create innovations that will bridge divides, enrich lives, and embolden the next generation to pursue their passions with commitment and purpose.
           </p>
         </motion.div>
       </motion.section>

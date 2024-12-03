@@ -48,14 +48,16 @@
   border-radius: 10px;
   transition: color 0.15s ease, border-color 0.15s ease;
   box-shadow: 0 4px 14px 0 rgba(0, 0, 0, 0.25);
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(15px);
+  transition: 0.2s;
 }
 
 .card:hover,
 .card:focus,
 .card:active {
-  color: #0070f3;
   border-color: #0070f3;
+  transform: scale(1.01);
 }
 
 .card h2 {

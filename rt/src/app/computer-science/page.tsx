@@ -44,33 +44,14 @@ const ComputerScience = () => {
           {/* Computer Science Classes Section */}
           <div className={styles.card}>
             <h2>Computer Science Classes</h2>
-            <p>Detail my accomplishments in your Computer Science courses.</p>
+            <p>I have completed a variety of computer science courses, including AP Computer Science A, Computer Science Principles, Advanced Object-Oriented Programming, Data Structures, and Advanced Data Structures. These classes have provided a strong foundation in programming, algorithms, and computational problem-solving, developing simultaneously my ability to design efficient and scalable solutions.</p>
           </div>
 
           {/* UMD Mindlabs Section */}
           <div className={styles.card}>
             <h2>UMD Mindlabs</h2>
             <p>
-              At UMD Mindlabs, I worked on the Breath Analysis project using
-              Python-based tools. In the project, we collected breathing data
-              from real people on days they were sick and healthy. We then
-              analyzed/digested the problem to determine what features would be
-              vital to extract to classify what kind of breath it was. Based on
-              our findings, we cleaned the data for noise, segmented the
-              breaths, and used Python data science packages (scikit-learn,
-              matplotlib, NumPy, Pandas) to save features, such as breath
-              length, amplitude, height, and slope (to reduce dimensions), to
-              CSV files with a note on the type of day. Using this data, we
-              trained and developed a Recurrent Neural Network in PyTorch for
-              each of the individual features, and we collected data to
-              determine which factors were the most influential in determining
-              what is considered a sick day. Using our knowledge, we developed
-              another Recurrent Neural Network with all the factors incorporated
-              and weighted to determine the type of breath. After developing our
-              model, we sought out one of our other research questions of signs
-              leading up to an illness based on human breaths. We utilized a
-              similar approach to determine signs and discovered similar
-              patterns that indicated the illness slightly beforehand.
+            I contributed meaningfully to the Breath Analysis project at UMD Mindlabs by analyzing real-life breathing data—healthy and sick days—collected from people using Python tools. We extracted the most necessary features like breath length, amplitude, and slope, then cleaned and segmented the data into files that we saved as CSV for further analysis. We used PyTorch to design and train RNNs for breath-type classification and identification of the most important factors for determining illness. Building on this basis, we trained another RNN using all factors in order to predict breath types, exploring patterns that would be predictive of the onset of illness and thereby discovering early signs using similar approaches.
             </p>
           </div>
 
@@ -78,123 +59,28 @@ const ComputerScience = () => {
           <div className={styles.card}>
             <h2>UMBC ITE</h2>
             <p>
-              Under the mentorship of my esteemed professor, I have engaged in a
-              comprehensive exploration of computer science disciplines,
-              particularly focusing on artificial intelligence, machine
-              learning, and computer vision. Utilizing a suite of sophisticated
-              tools and programming languages such as TensorFlow, OpenCV, Java,
-              Matlab, C++, Python, and notably, PyTorch, I have significantly
-              advanced my technical proficiency and applied it to a series of
-              complex projects.
-            </p>
-
-            <p>
-              One of my key projects involved leveraging PyTorch, a leading
-              machine learning library, to develop a neural network model
-              designed specifically to recognize cars. This project not only
-              allowed me to delve deep into the nuances of neural network
-              architectures but also provided me with practical experience in
-              training and optimizing models for specific computer vision tasks.
-              The successful implementation of this model underscores my ability
-              to harness cutting-edge machine learning frameworks to solve
-              real-world problems.
-            </p>
-
-            <p>
-              In addition to my work with PyTorch, I have utilized OpenCV, a
-              foundational library for computer vision operations, to automate
-              the annotation process of cars and stop signs in video feeds. This
-              task involved developing algorithms capable of detecting these
-              objects in real-time, streamlining the data preparation phase for
-              training computer vision models. The automation of this process
-              significantly enhanced the efficiency and accuracy of model
-              training, showcasing my skills in applying computer vision
-              techniques to improve machine learning workflows.
-            </p>
-
-            <p>
-              My involvement in programming a drone with a Raspberry Pi 4 in C++
-              and building and programming an RC car on an Arduino platform are
-              testament to my versatility and adeptness in integrating software
-              with hardware for robotics applications. These projects required a
-              deep understanding of both the theoretical and practical aspects
-              of computer science and robotics, reinforcing my comprehensive
-              skill set in the field.
-            </p>
-
-            <p>
-              Furthermore, I have had the opportunity to contribute to the
-              research initiatives of PhD students, offering support in projects
-              that extend beyond my primary focus areas. This collaboration has
-              not only broadened my knowledge base but also fostered a strong
-              sense of teamwork and interdisciplinary cooperation.
-            </p>
-
-            <p>
-              To support the dissemination of my findings and the accumulation
-              of my technical knowledge, I am in the process of creating a
-              professional website using NextJS, TypeScript, TailwindCSS, and
-              MongoDB. This platform will not only showcase my contributions to
-              the field of computer science but also serve as a valuable
-              resource for peers, educators, and industry professionals
-              interested in the latest advancements in artificial intelligence,
-              machine learning, and computer vision.
+            Under the mentorship of my professor, I have worked in artificial intelligence, machine learning, and computer vision using TensorFlow, PyTorch, OpenCV, Java, Python, and C++. Key projects include developing a car-recognition neural network in PyTorch, automating video annotation with OpenCV, programming a drone using Raspberry Pi in C++, and building an RC car on Arduino. These experiences have taught me how to integrate software and hardware for robotics and apply state-of-the-art machine learning techniques. I&apos;ve also worked with PhD research and am building a professional website using NextJS to share my work and insights.
             </p>
           </div>
 
           {/* Explore Digits */}
           <div className={styles.card}>
             <h2>ExploreDigits</h2>
-            <p>Discuss my involvement with Explore Digits.</p>
+            <p>I was given the opportunity to collaborate on developing tools during my internship at Explore Digits, which is meant to improve patient care and outcomes. My role included the development of a data collection and analytics platform by integrating machine learning, thus offering deeper and actionable insights regarding the health of patients. Those tools sped up data processing to drive effective healthcare decisions that demonstrate how AI can transform the face of medicine. The experience has helped my skills in machine learning, collaboration, and developing impactful solutions within a critical industry.</p>
           </div>
 
           {/* FTC Robotics */}
           <div className={styles.card}>
             <h2>FTC Robotics (2021-2023)</h2>
             <p>
-              In 2021, I embarked on an enriching journey with FTC robotics team
-              Cryptic #20123, where I primarily contributed as a programmer
-              amidst the challenges of the coronavirus pandemic. With a
-              foundational interest in engineering and computer science but
-              modest experience in robotics, I rapidly advanced my skills
-              through diligent self-education, workshops, and extensive online
-              resources. This self-driven approach underlines my capability to
-              learn and adapt swiftly to new technological domains.
-            </p>
-            <p>
-              My programming responsibilities were pivotal, focusing on the
-              development of both tele-operated (tele-op) and autonomous
-              functionalities of our robot. Utilizing the IntelliJ Integrated
-              Development Environment (IDE) and coding in Java, I was tasked
-              with crafting intricate algorithms that would enable our robot to
-              perform with precision and efficiency in competitive scenarios.
-              This role was my first practical application of GitHub for version
-              control, marking a significant milestone in my programming career
-              by emphasizing the importance of collaboration, version tracking,
-              and code management in large-scale projects.
-            </p>
-            <p>
-              Moreover, my foray into the realms of TensorFlow and OpenCV was
-              driven by the need to integrate advanced computer vision
-              capabilities into our robot. This experience was instrumental in
-              enhancing my proficiency in applying machine learning and image
-              processing techniques to real-world problems, showcasing my
-              ability to leverage cutting-edge technology in innovative ways.
-            </p>
-            <p>
-              My contributions as a programmer were characterized by a
-              meticulous approach to problem-solving, an eagerness to embrace
-              new technologies, and a commitment to excellence. These qualities,
-              coupled with a collaborative spirit and a relentless pursuit of
-              knowledge, were fundamental to our team&apos;s successes and my
-              personal growth within the realm of robotics programming.
+            In 2021, I joined FTC robotics team Cryptic #20123 as a programmer and promptly began learning robotics through pandemic difficulties. I have performed in the development of tele-op and autonomous robot functions in Java using IntelliJ; got experience with GitHub for version control. I also did an exploration of TensorFlow and OpenCV to integrate computer vision and apply machine learning and image processing techniques. My role highly required problem-solving, adaptability, and collaboration skills to drive both the success of the team and my personal growth in robotics programming.
             </p>
           </div>
 
           {/* Outside of School */}
           <div className={styles.card}>
             <h2>Personal Projects</h2>
-            <p>Discuss my accomplishments with your personal projects.</p>
+            <p>I demonstrate my commitment to developing leading-edge solutions and sharing knowledge through the use of technology in some of my personal projects. I have built websites with machine learning, artificial intelligence, and interactive features that engage users in unique ways. Some of my websites on Islam include educational games using neural networks designed to teach concepts interactively in a way that increases interest in Islamic culture and values. These platforms now combine state-of-the-art technologies in object recognition and personalized learning experiences with innovative technical underpinnings and valuable content. I have also written articles on the development process of these projects, from incorporating neural networks in games to leveraging cloud computing for scalability, hoping to teach and inspire others. I&apos;ve taken up projects through which I brought together technical knowledge, creativity, and a burning passion for education to inform, engage, and create inclusion by using technology.</p>
           </div>
         </section>
 

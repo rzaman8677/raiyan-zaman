@@ -153,7 +153,7 @@ const WorkSection = () => {
       </div>
 
       {/* Cards for Experiences and Community */}
-      <div className={styles.cardContainer}>
+      {/* <div className={styles.cardContainer}>
         <button className={styles.card}>
           <h3>Experiences</h3>
           <p>Summary of work experience and professional development.</p>
@@ -162,7 +162,7 @@ const WorkSection = () => {
           <h3>Community</h3>
           <p>Summary of community involvement and volunteer work.</p>
         </button>
-      </div>
+      </div> */}
       <Footer />
     </div>
   );

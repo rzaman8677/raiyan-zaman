@@ -74,7 +74,7 @@
   letter-spacing: 0.1em; /* Adjust letter-spacing as needed */
   text-transform: uppercase; /* Uppercase styling */
   margin-bottom: clamp(1.5rem, 3vw, 3rem); /* Adjusted vertical spacing */
-  color: rgb(19, 212, 247);
+  color: #2652e4;
 }
 
 .subtitle {
@@ -91,7 +91,7 @@
   font-size: 0.75rem; /* Adjusted font size */
   font-weight: 900; /* Bold for the button text */
   color: #ffffff;
-  background-color: #ffffff00; /* Transparent background for the button */
+  background-color: #1edebee7; /* Transparent background for the button */
   border: 0.125rem solid #01e646; /* White border for the button */
   cursor: pointer;
   transition: background-color 0.3s ease;

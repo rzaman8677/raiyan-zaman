@@ -12,7 +12,8 @@
   margin-bottom: 2rem;
   color: #ece7e7;
   text-align: center;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(15px);
   padding: 2rem;
   /* border-radius: 0px;
   border: #ece7e7 1px solid; */
@@ -72,7 +73,8 @@
 
 .button {
   cursor: pointer;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(15px);
   color: white;
   border: none;
   padding: 10px 20px;
@@ -121,9 +123,5 @@
 
   .imageContainer, .textContainerWithBackground {
     height: 300px;
-  }
-
-  .sliderButtons {
-    display: none; /* Hide buttons on smaller screens if desired */
   }
 }

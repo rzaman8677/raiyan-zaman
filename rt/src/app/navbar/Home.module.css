@@ -2,19 +2,20 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
-  background-color: #141b3100; /* Adjust to match your theme */
+  padding: 0.25rem 2rem;
+  background-color: #141b3100;
   color: #fff;
   position: fixed;
   width: 100%;
   top: 0;
   left: 0;
-  z-index: 1000;
+  z-index: 10000;
   transition: background-color 0.3s ease;
 }
 
 .navbar.scrolled {
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(15px);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 

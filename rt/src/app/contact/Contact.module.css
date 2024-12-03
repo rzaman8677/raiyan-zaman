@@ -28,7 +28,6 @@
   /* padding-top: 10%; */
   height: 100vh; 
   text-align: center;
-  background-color: rgba(20, 27, 49, 0.8);
   align-items: center;
   justify-content: center;
   display: flex;
@@ -40,7 +39,8 @@
 }
 
 .contactForm {
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(30, 30, 30, 0.5);
+  backdrop-filter: blur(15px);
   box-shadow: 0 4px 10px rgba(255, 1, 1, 0.2);
   padding: 5rem;
   margin: auto;
@@ -79,12 +79,12 @@
   padding: 15px;
   border: none;
   border-radius: 5px;
-  background-color: rgb(5, 30, 68, 0.7);
+  background-color: rgb(13, 193, 224, 0.7);
   color: #fff;
   cursor: pointer;
   outline: none;
 }
 
 .inputGroup button:hover {
-  background-color: rgb(13, 193, 224, 0.7);
+  background-color: rgb(13, 210, 254, 0.7);
 }

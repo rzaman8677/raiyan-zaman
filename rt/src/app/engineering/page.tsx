@@ -152,79 +152,109 @@ const EngineeringPage = () => {
           {/* PLTW Section */}
           <div className={styles.card}>
             <h2>Project Lead The Way (PLTW)</h2>
-            <p>Describe my experience and projects with PLTW.</p>
+            <p>
+              I have taken a few Project Lead the Way courses during high
+              school, which provided me with a very strong foundation in
+              engineering concepts and hands-on skills.
+            </p>
+
+            <p>
+              In Digital Electronics, I learned how to design and model
+              circuits, research how electrical systems work, and then apply the
+              knowledge in a practical sense to real projects. We constructed
+              functional circuits, programmed microcontrollers, and even
+              integrated these circuits into small robots.
+            </p>
+
+            <p>
+              In Computer Integrated Manufacturing, I studied robotics,
+              hydraulics, and pneumatics. We saw the processes of manufacture:
+              how to design and automate systems for applications in real life.
+              I particularly enjoyed building and programming robots and using
+              automation techniques to improve performance.
+            </p>
+
+            <p>
+              During my coursework in Principles of Engineering, some of the
+              areas we covered included mechanics, structural engineering, and
+              energy systems. This course really exposed me to a variety of
+              engineering problems and shaped my skill set to be flexible.
+            </p>
+
+            <p>
+              In Introduction to Engineering Design, the students learned about
+              computer-aided design tools and how to bring together technical
+              skills and imagination in a project; from designing components all
+              the way to creating prototypes, this course helped establish a
+              strong base in design principles and problem-solving.
+            </p>
+
+            <p>
+              These PLTW courses have been the strongest in helping me
+              understand engineering—certainly, to approach challenges with a
+              hands-on, interdisciplinary perspective.
+            </p>
           </div>
 
           {/* UMBC ITE Section */}
           <div className={styles.card}>
             <h2>UMBC ITE</h2>
             <p>
-              My journey under the guidance of a distinguished professor has not
-              only encompassed the realms of computer science but also extended
-              deeply into engineering, particularly in the integration of
-              hardware and software systems. This holistic approach has involved
-              leveraging engineering principles to design, build, and program
-              hardware platforms, such as drones and RC cars, using a variety of
-              tools and languages including C++ and Arduino. These experiences
-              have honed my abilities to understand and manipulate the physical
-              components that underpin digital systems.
+              With the guidance of a distinguished professor, I was able to
+              explore the intersection of computer science and engineering,
+              specifically the integration of hardware and software systems.
+              This included a design and programming exploration of hardware
+              platforms: drones with Raspberry Pi 4 and C++, and RC cars
+              controlled by Arduino. These projects further my understanding of
+              the physical layer of digital systems, complementing knowledge in
+              computer science.
             </p>
 
             <p>
-              Engineering sophisticated hardware systems requires a profound
-              understanding of both mechanical and electrical engineering
-              concepts. My work in building a drone with a Raspberry Pi 4 and
-              programming it in C++, as well as constructing an RC car and
-              implementing a control system on an Arduino, exemplify the
-              seamless fusion of these disciplines. This hands-on experience
-              with hardware has not only solidified my understanding of the
-              tangible aspects of technology but also complemented my computer
-              science skills by providing a comprehensive perspective on how
-              software and hardware interact.
-            </p>
-
-            <p>
-              The knowledge I have gained from engineering hardware systems
-              complements my capabilities in computer science, especially in the
-              development and implementation of machine learning models and
-              computer vision algorithms. Understanding the hardware on which
-              these algorithms run allows me to optimize software performance
-              and efficiency, making it possible to design systems that are not
-              only innovative but also practical and reliable in real-world
-              applications. My ability to bridge the gap between software and
-              hardware is a direct result of my interdisciplinary education and
-              experience, enabling me to contribute effectively to projects that
-              require a deep integration of technology.
-            </p>
-
-            <p>
-              This synergy between computer science and engineering is further
-              demonstrated in my contributions to projects involving autonomous
-              vehicles and robotics. My hands-on experience with hardware
-              platforms, combined with my expertise in machine learning and
-              computer vision, has empowered me to develop systems that can
-              sense, interpret, and interact with their environment in
-              sophisticated ways. These projects showcase my ability to apply a
-              comprehensive skill set to tackle complex challenges, from the
-              underlying electronics to the software that controls them.
-            </p>
-
-            <p>
-              Ultimately, my engineering experience not only enriches my
-              understanding of the physical world but also enhances my computer
-              science endeavors, particularly in areas where hardware and
-              software integration is critical. The ability to design and
-              implement both the tangible and intangible components of
-              technological solutions is a testament to the interdisciplinary
-              nature of my education and work, positioning me uniquely in the
-              field of technology.
+              By combining knowledge of mechanical and electrical engineering
+              with machine learning and computer vision, I&apos;ve developed
+              autonomous systems that sense and interact with their environment.
+              This synergy enables me to optimize software performance on
+              hardware, creating innovative, reliable solutions. My
+              interdisciplinary experience bridges the gap between software and
+              hardware, equipping me to tackle complex challenges and contribute
+              effectively to technology-driven projects.
             </p>
           </div>
 
           {/* Outside of School */}
           <div className={styles.card}>
             <h2>Personal Projects</h2>
-            <p>Discuss my accomplishments with your personal projects.</p>
+            <p>
+              Outside of school, I have pursued my interest in robotics and
+              engineering through hands-on projects and personal initiatives.
+              The summer going into tenth grade, I started working on my own
+              autonomous assistant robot. It has a tank drive chassis with tank
+              threads, being powered by four GoBilda Yellow Jacket motors and
+              controlled by a Pololu motor HAT. The core of the system is the
+              vision sensors: Luxonis OAK-D Lite cameras, optimized for neural
+              networks. I had chosen vision-based sensing after researching
+              Tesla&apos;s lidar-free approach to autonomous driving during a
+              research class on autonomous systems in inclement weather. The
+              robot is based on a Raspberry Pi 4 with 8 GB of RAM. I am
+              currently working on the autonomous system using vSLAM, and on top
+              of that, I will use reinforcement learning to complete it. I
+              expect this to be done this summer, and I intend to integrate
+              OpenAI&apos;s chatbot API for in-depth interaction.
+            </p>
+            <p>
+              In addition to robotics, I&apos;ve used my Raspberry Pi and 3D
+              printer to bring various ideas to life. I have designed 3D-printed
+              CAD models of such important monuments as the Shohid Minar in
+              Bangladesh, the FIFA World Cup trophy, and other practical
+              household items. These projects give me practice in CAD modeling
+              and 3D printing—how to bring in the artistic with engineering
+              feasibility. I also built a PC from scratch just for the fun of
+              getting familiar with hardware components and assembly. These
+              experiences underline my interest in using technology creatively,
+              whether it be to help solve real-world problems or to come up with
+              new ideas altogether.
+            </p>
           </div>
         </section>
 

@@ -1,7 +1,7 @@
 /* About.module.css */
 .mainContainer {
   font-family: "Poppins", sans-serif;
-  padding-top: 120px; /* Adjust the padding to avoid overlapping with the navbar */
+  padding-top: 120px; 
 }
 
 .fixedBackground {
@@ -27,9 +27,10 @@
 /* About.module.css */
 .heroSection {
   position: relative;
-  height: 500px; /* Adjust the height as needed */
+  height: 100px; /* Adjust the height as needed */
   text-align: center;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(15px);
 }
 
 
@@ -149,7 +150,8 @@
   text-align: center;
   margin: 0 auto;
   line-height: 2; /* Increased line height for better readability */
-  background-color: rgba(20, 27, 49, 0.8);
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(15px);
   padding-left: 10%;
   padding-right: 10%;
   padding-top: 5%;
@@ -187,7 +189,7 @@
 }
 
 .contactForm {
-  background: rgba(255, 255, 255, 0);
+  background: rgba(30, 30, 30, 0.9);
   backdrop-filter: blur(10px);
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
