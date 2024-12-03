@@ -1,5 +1,3 @@
-/* styles/Engineering.module.css */
-
 .main {
   padding: 4rem;
   flex: 1;
@@ -72,10 +70,38 @@
   margin-bottom: 5%;
 }
 
+/* Media Query for Screens Smaller Than 950px */
 @media (max-width: 950px) {
-  /* Adjust this value based on your design's breakpoint */
   .card {
-    flex-basis: calc(100% - 2rem); /* Takes full width minus margin */
+    flex-basis: 95%; /* Set width to 95% */
+    margin: 1rem auto; /* Center the card horizontally */
+  }
+}
+
+/* Media Query for Screens Smaller Than 768px */
+@media (max-width: 768px) {
+  .main {
+    padding: 2rem; /* Adjust padding for smaller screens */
+  }
+
+  .accomplishments {
+    flex-direction: column; /* Stack cards vertically */
+    align-items: center; /* Center content */
+  }
+
+  .card {
+    flex-basis: 95%; /* Maintain 95% width */
+    margin: 1rem auto; /* Center horizontally */
+    padding: 1.5rem; /* Adjust padding */
+    border-radius: 10px; /* Keep border-radius */
+  }
+
+  .card h2 {
+    font-size: 1.5rem; /* Adjust font size for smaller screens */
+  }
+
+  .card p {
+    font-size: 1rem; /* Adjust paragraph font size */
   }
 }
 

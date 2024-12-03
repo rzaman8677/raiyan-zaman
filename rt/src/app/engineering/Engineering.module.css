@@ -1,5 +1,3 @@
-/* styles/Engineering.module.css */
-
 .main {
   padding: 4rem;
   flex: 1;
@@ -7,6 +5,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
+  overflow-x: hidden;
 }
 
 .fixedBackground {
@@ -72,15 +71,50 @@
   padding-bottom: 5%;
 }
 
+/* Media Query for Screens Smaller Than 950px */
 @media (max-width: 950px) {
-  /* Adjust this value based on your design's breakpoint */
   .card {
-    flex-basis: calc(100% - 0.5rem); /* Takes full width minus margin */
+    flex-basis: 100%;
+    margin: 0;
+    margin-bottom: 2rem;
+    padding: 1rem;
   }
 }
 
-/* styles/Gallery.module.css */
+/* Media Query for Screens Smaller Than 768px */
+@media (max-width: 768px) {
+  .main {
+    padding: 0;
+    align-items: stretch; /* Make the container stretch */
+  }
 
+  .accomplishments {
+    flex-direction: column; /* Stack the cards vertically */
+    justify-content: flex-start; /* No extra space around the cards */
+    align-items: stretch; /* Stretch cards to full width */
+    margin-top: 0;
+    padding: 0; /* Remove padding around the container */
+  }
+
+  .card {
+    flex-basis: 100%; /* Cards take the full width */
+    width: 95%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 1rem; /* Add spacing between stacked cards */
+    padding: 1.5rem; /* Adjust padding for content spacing */
+  }
+
+  .card h2 {
+    font-size: 1.75rem; /* Adjust heading size for smaller screens */
+  }
+
+  .card p {
+    font-size: 1.25rem; /* Adjust paragraph size for smaller screens */
+  }
+}
+
+/* Image Gallery Styles (if applicable) */
 .imageGallery {
   text-align: center;
   padding: 3rem 0;
@@ -94,7 +128,7 @@
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* Now 4 images per row */
+  grid-template-columns: repeat(4, 1fr); /* 4 images per row */
   gap: 10px;
 }
 
@@ -106,14 +140,12 @@
   background-color: rgba(0, 0, 0, 0.7);
 }
 
-/* Landscape images now will automatically take up the height needed */
 .landscape {
-  grid-row: span 1;
+  grid-row: span 1; /* Landscape images take 1 row */
 }
 
-/* Portrait images will span across two landscape images in height */
 .portrait {
-  grid-row: span 3;
+  grid-row: span 3; /* Portrait images take 3 rows */
 }
 
 .responsiveImage {
@@ -122,12 +154,9 @@
   object-fit: contain;
 }
 
-/* Add responsive styles if needed */
+/* Adjust Grid for Smaller Screens */
 @media (max-width: 768px) {
   .grid {
-    grid-template-columns: repeat(
-      2,
-      1fr
-    ); /* Adjust the number of columns for smaller screens */
+    grid-template-columns: repeat(2, 1fr); /* 2 images per row */
   }
 }
