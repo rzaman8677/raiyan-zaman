@@ -3,13 +3,26 @@ import React, { useEffect, useState } from "react";
 import Head from "next/head";
 import Image from "next/image"; // Import the Image component
 import Link from "next/link";
-import styles from "./Home.module.css"; 
+import styles from "./Home.module.css";
 import Footer from "@/app/footer/page";
 import Navbar from "@/app/navbar/page";
 
-
 export default function Home() {
-  const words = ["a Developer", "a Designer", "an Innovator", "a Creator", "an Enthusiast", "a Student", "a Leader", "a Bengali"];
+  const words = [
+    "a Full-Stack Engineer",
+    "an AI/ML Researcher",
+    "a Cloud Architect",
+    "a Technical Leader",
+    "an Open Source Contributor",
+    "a Problem Solver",
+    "an AWS Expert",
+    "a Visionary Coder",
+    "a STEM Advocate",
+    "a Systems Thinker",
+    "a Robotics Developer",
+    "a Deep Learning Enthusiast",
+  ];
+
   const [index, setIndex] = useState(0);
   const [subIndex, setSubIndex] = useState(0);
   const [reverse, setReverse] = useState(false);
@@ -31,10 +44,10 @@ export default function Home() {
     if (index >= words.length) return;
 
     if (subIndex === words[index].length + 1 && !reverse) {
-      setTimeout(() => setReverse(true), 1000); // Wait a bit at the end of a word
+      setTimeout(() => setReverse(true), 1000);
     } else if (subIndex === 0 && reverse) {
       setReverse(false);
-      setIndex((prevIndex) => (prevIndex + 1) % words.length); // Loop back to the first word
+      setIndex((prevIndex) => (prevIndex + 1) % words.length);
     }
 
     const timeout = setTimeout(() => {
@@ -52,7 +65,7 @@ export default function Home() {
           <p className={styles.name}>Hi, my name is</p>
           <p className={styles.title}>Raiyan Zaman.</p>
           <p className={styles.subtitle}>
-            I am {" "}
+            I am{" "}
             <span className={styles.typing}>
               {words[index].substring(0, subIndex)}
             </span>
