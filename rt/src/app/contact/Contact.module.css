@@ -1,14 +1,15 @@
-/* About.module.css */
 .mainContainer {
   font-family: "Poppins", sans-serif;
+  padding-top: 120px; /* for fixed navbar */
+  padding-bottom: 80px; /* for fixed footer */
+  min-height: 100vh;
+  position: relative;
+  z-index: 1;
 }
 
 .fixedBackground {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  inset: 0;
   z-index: -1;
 }
 
@@ -16,17 +17,11 @@
   object-fit: cover;
 }
 
-/* Ensure the rest of your main content has a higher z-index than the background */
-.mainContainer {
-  position: relative;
-  z-index: 1;
-  /* other styles */
-}
+/* Full-height hero area */
 
 .heroSection {
   position: relative;
-  /* padding-top: 10%; */
-  height: 100vh; 
+  height: calc(100vh - 120px);
   text-align: center;
   align-items: center;
   justify-content: center;
@@ -34,57 +29,107 @@
   backdrop-filter: blur(10px);
 }
 
-.heroSection:hover {
-  box-shadow: 0 6px 24px rgba(168, 4, 4, 0.3);
-}
+/* Contact card (no form) */
 
-.contactForm {
-  background: rgba(30, 30, 30, 0.5);
-  backdrop-filter: blur(15px);
-  box-shadow: 0 4px 10px rgba(255, 1, 1, 0.2);
-  padding: 5rem;
+.contactCard {
+  background:
+    radial-gradient(circle at top left, rgba(1, 230, 70, 0.2), transparent 55%),
+    radial-gradient(circle at bottom right, rgba(13, 193, 224, 0.25), transparent 55%),
+    rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(18px);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.95);
+  padding: 2.5rem 2.4rem;
   margin: auto;
   width: 90%;
-  max-width: 1140px;
+  max-width: 720px;
+  border-radius: 22px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-.contactForm h2 {
-  color: #fff;
-  text-align: center;
-  margin-bottom: 1rem;
+.contactTitle {
+  color: #ffffff;
+  margin-bottom: 0.4rem;
+  font-size: 2rem;
 }
 
-.inputGroup {
+.contactSubtitle {
+  color: rgba(240, 240, 240, 0.9);
+  margin-bottom: 1.6rem;
+  font-size: 0.98rem;
+}
+
+/* Links grid */
+
+.contactGrid {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1rem;
 }
 
-.inputGroup input,
-.inputGroup textarea {
-  background: transparent;
-  border: 2px solid rgba(255, 255, 255, 0.7);
-  padding: 10px;
-  color: #fff;
-  border-radius: 5px;
-  outline: none;
+.contactItem {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: #f4f4f4;
+  text-decoration: none;
+  justify-content: flex-start;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
 }
 
-.inputGroup input::placeholder,
-.inputGroup textarea::placeholder {
-  color: rgba(255, 255, 255, 0.7);
+.contactItem:hover {
+  transform: translateY(-2px);
+  border-color: #01e646;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.9);
 }
 
-.inputGroup button {
-  padding: 15px;
-  border: none;
-  border-radius: 5px;
-  background-color: rgb(13, 193, 224, 0.7);
-  color: #fff;
-  cursor: pointer;
-  outline: none;
+.contactIconWrapper {
+  width: 34px;
+  height: 34px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at top, #01e646, #0d91ff);
 }
 
-.inputGroup button:hover {
-  background-color: rgb(13, 210, 254, 0.7);
+.contactIcon {
+  color: #ffffff;
+  font-size: 1.2rem;
+}
+
+.contactText {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.contactLabel {
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  opacity: 0.85;
+}
+
+.contactValue {
+  font-size: 0.96rem;
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+  .contactCard {
+    padding: 2rem 1.5rem;
+  }
+
+  .contactTitle {
+    font-size: 1.7rem;
+  }
+
+  .contactSubtitle {
+    font-size: 0.9rem;
+  }
 }

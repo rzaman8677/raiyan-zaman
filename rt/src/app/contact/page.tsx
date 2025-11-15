@@ -1,42 +1,14 @@
 "use client";
-import React, { useState } from "react";
+import React from "react";
 import Head from "next/head";
 import Image from "next/image";
 import styles from "./Contact.module.css";
 import Footer from "../footer/page";
 import Navbar from "../navbar/page";
 import { motion } from "framer-motion";
+import { FaEnvelope, FaLinkedin, FaGithub } from "react-icons/fa";
 
-export default function About() {
-  const [formValues, setFormValues] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
-
-  const handleChange = (
-    event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    const target = event.target as HTMLInputElement | HTMLTextAreaElement;
-    setFormValues({
-      ...formValues,
-      [target.name]: target.value,
-    });
-  };
-
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    // Add your form validation and submission logic here
-
-    console.log(formValues);
-    // After submission logic, clear form
-    setFormValues({
-      name: "",
-      email: "",
-      message: "",
-    });
-  };
-
+export default function Contact() {
   const containerVariants = {
     hidden: { opacity: 0 },
     show: {
@@ -52,18 +24,14 @@ export default function About() {
     show: { y: 0, opacity: 1 },
   };
 
-  const buttonVariants = {
-    hover: { scale: 1.05, transition: { duration: 0.3 } },
-    tap: { scale: 0.95 },
-  };
-
   return (
     <div className={styles.mainContainer}>
       <Head>
         <title>Contact Raiyan Zaman</title>
-        {/* Rest of the Head content */}
       </Head>
+
       <Navbar />
+
       <div className={styles.fixedBackground}>
         <Image
           src="/images/logo5.png"
@@ -73,47 +41,74 @@ export default function About() {
           className={styles.backgroundImage}
         />
       </div>
+
       <section className={styles.heroSection}>
-        <motion.div variants={itemVariants} className={styles.contactForm}>
-          <h2>Contact Me</h2>
-          <form onSubmit={handleSubmit}>
-            <div className={styles.inputGroup}>
-              <input
-                type="text"
-                placeholder="Your Name"
-                name="name"
-                value={formValues.name}
-                onChange={handleChange}
-                required
-              />
-              <input
-                type="email"
-                placeholder="Your Email"
-                name="email"
-                value={formValues.email}
-                onChange={handleChange}
-                required
-              />
-              <textarea
-                placeholder="Your Message"
-                rows={4}
-                name="message"
-                value={formValues.message}
-                onChange={handleChange}
-                required
-              ></textarea>
-              <motion.button
-                whileHover="hover"
-                whileTap="tap"
-                variants={buttonVariants}
-                type="submit"
-              >
-                Send Message
-              </motion.button>
-            </div>
-          </form>
+        <motion.div
+          className={styles.contactCard}
+          variants={containerVariants}
+          initial="hidden"
+          animate="show"
+        >
+          <motion.h1 variants={itemVariants} className={styles.contactTitle}>
+            Contact
+          </motion.h1>
+          <motion.p variants={itemVariants} className={styles.contactSubtitle}>
+            Reach out for collaborations, internships, or just to talk tech,
+            AI, and systems.
+          </motion.p>
+
+          <motion.div
+            variants={itemVariants}
+            className={styles.contactGrid}
+          >
+            <a
+              href="mailto:raiyanrzaman@gmail.com"
+              className={styles.contactItem}
+            >
+              <div className={styles.contactIconWrapper}>
+                <FaEnvelope className={styles.contactIcon} />
+              </div>
+              <div className={styles.contactText}>
+                <span className={styles.contactLabel}>Email</span>
+                <span className={styles.contactValue}>
+                  raiyanrzaman@gmail.com
+                </span>
+              </div>
+            </a>
+
+            <a
+              href="https://www.linkedin.com/in/raiyanzaman1"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.contactItem}
+            >
+              <div className={styles.contactIconWrapper}>
+                <FaLinkedin className={styles.contactIcon} />
+              </div>
+              <div className={styles.contactText}>
+                <span className={styles.contactLabel}>LinkedIn</span>
+                <span className={styles.contactValue}>/in/raiyanzaman1</span>
+              </div>
+            </a>
+
+            <a
+              href="https://github.com/rzaman8677"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.contactItem}
+            >
+              <div className={styles.contactIconWrapper}>
+                <FaGithub className={styles.contactIcon} />
+              </div>
+              <div className={styles.contactText}>
+                <span className={styles.contactLabel}>GitHub</span>
+                <span className={styles.contactValue}>@rzaman8677</span>
+              </div>
+            </a>
+          </motion.div>
         </motion.div>
       </section>
+
       <Footer />
     </div>
   );

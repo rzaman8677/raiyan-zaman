@@ -1,67 +1,20 @@
 "use client";
+
 import Head from "next/head";
-import Image from "next/image";
-import React, { useState } from "react";
-import styles from "./About.module.css"; // Ensure this path matches your file structure
+import React from "react";
+import styles from "./About.module.css";
 import Footer from "../footer/page";
 import Navbar from "../navbar/page";
 import { motion } from "framer-motion";
+import { MdMemory, MdBolt, MdPublic } from "react-icons/md";
+import { FaEnvelope, FaLinkedin, FaGithub } from "react-icons/fa";
 
-// Enhanced About component definition
 export default function About() {
-  const [formValues, setFormValues] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
-
-  const handleChange = (
-    event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    const target = event.target as HTMLInputElement | HTMLTextAreaElement;
-    setFormValues({
-      ...formValues,
-      [target.name]: target.value,
-    });
-  };
-
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    // Add your form validation and submission logic here
-
-    console.log(formValues);
-    // After submission logic, clear form
-    setFormValues({
-      name: "",
-      email: "",
-      message: "",
-    });
-  };
-  // Constant for Khabib Quote
-  const khabibQuote = "The eagle does not catch flies. - Khabib Nurmagomedov";
-
-  // List of hobbies and interests
-  const hobbies = [
-    "Basketball",
-    "Building PCs",
-    "Gaming",
-    "MMA",
-    "Soccer",
-    "Football",
-    "Building Robots",
-    "Programming",
-    "3D Printing",
-    "Researching and Modeling",
-  ];
-
-  // Motion variants for animations
   const containerVariants = {
     hidden: { opacity: 0 },
     show: {
       opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
-      },
+      transition: { staggerChildren: 0.1 },
     },
   };
 
@@ -70,152 +23,314 @@ export default function About() {
     show: { y: 0, opacity: 1 },
   };
 
-  const buttonVariants = {
-    hover: { scale: 1.05, transition: { duration: 0.3 } },
-    tap: { scale: 0.95 },
-  };
-
   return (
     <div className={styles.mainContainer}>
       <Head>
         <title>About Raiyan Zaman</title>
-        <link
-          href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
-          rel="stylesheet"
-        />
       </Head>
+
       <Navbar />
-      {/* Background Image */}
-      <div className={styles.fixedBackground}>
-        <Image
-          src="/images/logo5.png"
-          alt="Background"
-          fill
-          quality={100}
-          className={styles.backgroundImage}
-        />
-      </div>
+
+      {/* HERO STRIP */}
       <section className={styles.heroSection}>
-        <div className={styles.heroContent}>
-          <h1>Welcome to My Journey</h1>
-          <p>Discover more about me, my experiences, and what I do.</p>
-        </div>
+        <motion.div
+          className={styles.heroCard}
+          initial={{ opacity: 0, y: -10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+        >
+          <div className={styles.heroBadgeRow}>
+            <span className={styles.heroBadge}>About</span>
+            <span className={styles.heroTag}>AI · Cloud · Systems</span>
+          </div>
+          <h1 className={styles.heroTitle}>Welcome to My Journey</h1>
+          <p className={styles.heroSubtitle}>
+            How my background, experience, and projects connect into one thread:
+            building reliable AI-driven systems people actually use.
+          </p>
+        </motion.div>
       </section>
 
-      {/* <motion.section
-        className={styles.imageSection}
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.2 }}
-      >
-        <div className={styles.imageWrapper}>
-          <Image
-            src="/images/rz.jpg"
-            alt="Raiyan Zaman"
-            fill
-            className={styles.imageImage}
-          />
-        </div>
-      </motion.section> */}
+      {/* STORY CARDS */}
       <motion.section
-        className={styles.aboutSection}
+        className={styles.storySection}
         initial="hidden"
         animate="show"
         variants={containerVariants}
       >
-        <motion.div variants={itemVariants} className={styles.textContent}>
-          <h2>About Me</h2>
-          <p>
-          In the heart of the United States, where opportunity meets a rich blend of cultures, my journey into the world of technology took shape. This is a journey, though seeming to be modern and digital, which has been well rooted in values and work ethic inherited from Bengali culture. My first exposure to technology came in the second grade, when I was introduced to Python—not just as a subject in the academic curriculum but also as an inspiration during a time when conventional education often suppressed my creativity and analytical thinking. This challenging phase proved to be a turning point, demonstrating how the language of programming could serve as a powerful medium for self-expression and problem-solving.
-          </p>
-          <p>
-          Soon enough, technology became more than just a means of having fun or doing school; it became a way in which I could help people. Often, I was the sole person in my family who would fix broken devices, an occupation that branded me as a natural problem solver. I was curious enough to dive deeper: taking things apart and putting them back together, from gadgets to intricate software systems. This hands-on exploration opened the door to Computer Science and Engineering, where I discovered true innovation happens between these two fields. It is where the logical precision of coding meets the practical impact of engineering—developing solutions that can truly change lives.
-          </p>
+        <motion.div className={styles.storyGrid} variants={containerVariants}>
+          <motion.div className={styles.storyCard} variants={itemVariants}>
+            <MdMemory className={styles.storyIcon} />
+            <h2>How it started</h2>
+            <p>
+              I grew up in the U.S. with Bangladeshi roots and discovered Python
+              in 2nd grade. Code became the place where I could experiment, fix
+              things, and think beyond what school assignments allowed.
+            </p>
+          </motion.div>
+
+          <motion.div className={styles.storyCard} variants={itemVariants}>
+            <MdBolt className={styles.storyIcon} />
+            <h2>What I build now</h2>
+            <p>
+              I design full-stack, cloud, and AI systems—social platforms,
+              study engines, job tools, and research prototypes. I like taking
+              ideas from sketch to production with clear impact.
+            </p>
+          </motion.div>
+
+          <motion.div className={styles.storyCard} variants={itemVariants}>
+            <MdPublic className={styles.storyIcon} />
+            <h2>How I think</h2>
+            <p>
+              I learn like an engineer and compete like an athlete—disciplined,
+              curious, and obsessed with getting better. I want AI and systems
+              thinking to unlock access, not add more noise.
+            </p>
+          </motion.div>
         </motion.div>
       </motion.section>
 
+      {/* EXPERIENCE & IMPACT */}
       <motion.section
-        className={styles.aboutSection}
+        className={styles.experienceSection}
         initial="hidden"
         animate="show"
         variants={containerVariants}
       >
-        <motion.div variants={itemVariants} className={styles.textContent}>
-          <h2>My Story</h2>
-          <p>
-          One experience that greatly influenced my journey in technology was visiting a robotics laboratory at Virginia Tech. Watching how software and hardware come together to animate machines was definitely eye-opening. This experience really opened my eyes beyond just software development and introduced me to the fascinating world of robotics and engineering. It passed astonishment regarding robotics and let me get to understand how truly complex the relationship was between the code and physical world—but that can deliver the magic of self-driving cars and intelligent systems.
-          </p>
-          <p>
-          My journey was not without obstacles. The more I delved into what many considered an unusual or overly complicated pursuit, the more I faced doubt and even ridicule from my peers. During this challenging time, I found inspiration in the resilience and work ethic of athletes and leaders that I looked up to. Guys like Stephen Curry, Tom Brady, and especially Khabib Nurmagomedov became role models for me in perseverance. Khabib&apos;s philosophy of relentless hard work, humility, and unwavering dedication in the face of adversity hit very close to home for me. He taught the lesson that true excellence far exceeds personal accomplishments; rather, it encompasses values imbued in one&apos;s person, which serve to inspire others.
-          </p>
+        <motion.div
+          className={styles.experienceShell}
+          variants={itemVariants}
+        >
+          <div className={styles.experienceHeader}>
+            <h2>Experience &amp; Impact</h2>
+            <p>
+              I focus on projects that ship, help real users, and push my
+              skills across AI, cloud, and full-stack engineering.
+            </p>
+          </div>
+
+          <div className={styles.experienceGrid}>
+            <div className={styles.experienceCard}>
+              <h3>Explore Digits — SDE Intern (LLMOps / Agent Platform)</h3>
+              <p className={styles.experienceMeta}>
+                2023 – Present · MCP, cloud infra, and production LLM tooling
+              </p>
+              <ul>
+                <li>
+                  Built a Model Context Protocol server/client to connect LLM
+                  tools to internal workflows, containerized with Docker and
+                  deployed on AWS ECS/EC2 with RDS and CloudWatch SLO alerts.
+                </li>
+                <li>
+                  Shipped an admin frontend (Next.js/React) for IRB-approved
+                  CHIRP™ pediatric health studies with strict role-based access.
+                </li>
+                <li>
+                  Tuned analytics queries to cut report latency ~40% while
+                  reducing infra cost.
+                </li>
+              </ul>
+            </div>
+
+            <div className={styles.experienceCard}>
+              <h3>UMBC ITE — Machine Learning &amp; Sensing Research</h3>
+              <p className={styles.experienceMeta}>
+                2023 – 2025 · Robotics, CV/ML, and time-series modeling
+              </p>
+              <ul>
+                <li>
+                  Prototyped Kalman-filter and sensor-fusion pipelines on RC
+                  platforms to harden estimators against cyber-physical attacks.
+                </li>
+                <li>
+                  Built CV/ML applications in Python/TensorFlow to surface early
+                  illness patterns from time-series breathing data.
+                </li>
+              </ul>
+            </div>
+
+            <div className={styles.experienceCard}>
+              <h3>Robotics &amp; Embedded Systems</h3>
+              <p className={styles.experienceMeta}>
+                FTC Robotics · RC platforms · Arduino &amp; Raspberry Pi
+              </p>
+              <ul>
+                <li>
+                  Developed tele-op and autonomous robot code in Java, using
+                  TensorFlow/OpenCV for computer vision.
+                </li>
+                <li>
+                  Built drones and RC cars with Raspberry Pi, Arduino, C++, and
+                  Python—connecting perception, control, and hardware.
+                </li>
+              </ul>
+            </div>
+
+            <div className={styles.experienceCard}>
+              <h3>Platforms &amp; Personal Work</h3>
+              <p className={styles.experienceMeta}>
+                Laamly · Cloud-Resume+ · Job Tracker · Adaptive Study Engine
+              </p>
+              <ul>
+                <li>
+                  Created production web apps using Next.js, serverless AWS, and
+                  LLMs to solve real problems—social, career, and education.
+                </li>
+                <li>
+                  Designed systems with metrics in mind: engagement,
+                  reliability, and time saved for users.
+                </li>
+              </ul>
+              <a href="/projects" className={styles.experienceLink}>
+                View detailed case studies on the Projects page →
+              </a>
+            </div>
+          </div>
         </motion.div>
       </motion.section>
+
+      {/* EDUCATION */}
       <motion.section
-        className={styles.aboutSection}
+        className={styles.educationSection}
         initial="hidden"
         animate="show"
         variants={containerVariants}
       >
-        <motion.div variants={itemVariants} className={styles.textContent}>
-          <h2>My Motivation</h2>
-          <p>
-          The intersection of artificial intelligence and machine learning with the basics of computer science and engineering has really made a huge difference in how I&apos;ve grown from just a fan of technology to an innovator. The possibilities within these fields, specifically in the area of autonomous vehicles, are far more than just a technical achievement; it&apos;s a chance to affect real change in society. This desire comes as a result of commitment to the leadership and care in innovations, while developing solutions to emphasize human well-being and advancement.
-          </p>
-          <p>
-          My experiences in Bangladesh have been life-altering. The experiences I went through there underlined how immense the gap between potentiality and opportunity really was, and these are lessons one can never forget. Motivated anew by the resilience and the hardworking nature that epitomize the spirit of the Bengali people, I am driven toward action in using technology for this empowerment and equity. The influence of Khabib is not only with the accomplishments in the octagon but with the leadership, integrity, and hard work he showed, which was a very good example to follow. It&apos;s a synthesis of technological enthusiasm, engineering ingenuity, and dedication to ethical leadership that I try to put into everything I will do henceforth.
-          </p>
-          <p>
-          My story goes beyond personal achievements; it is a testimony to the potential of technology, engineering, and computer science as powerful forces for good. I am committed to taking up leadership that, like Khabib, reflects hard work, honor, and respect and brings about positive change. As I continue to push the frontiers of computer science and engineering, I hope to create innovations that will bridge divides, enrich lives, and embolden the next generation to pursue their passions with commitment and purpose.
-          </p>
+        <motion.div
+          className={styles.educationShell}
+          variants={itemVariants}
+        >
+          <div className={styles.educationHeader}>
+            <h2>Education</h2>
+            <p>
+              A mix of formal programs and a lot of self-directed building,
+              reading, and experimenting.
+            </p>
+          </div>
+
+          <div className={styles.educationTimeline}>
+            <div className={styles.educationItem}>
+              <span className={styles.educationBadge}>University</span>
+              <h3>Georgia Institute of Technology</h3>
+              <p className={styles.educationMeta}>
+                B.S. in Computer Science · Threads: Intelligence &amp;
+                Information Internetworks
+              </p>
+              <ul>
+                <li>
+                  Focus on AI, machine learning, networking, and large-scale
+                  systems.
+                </li>
+                <li>
+                  Projects spanning data structures/algorithms, distributed
+                  systems, and applied AI.
+                </li>
+              </ul>
+            </div>
+
+            <div className={styles.educationItem}>
+              <span className={styles.educationBadge}>High School</span>
+              <h3>Centennial High School</h3>
+              <p className={styles.educationMeta}>
+                Howard County, MD · STEM &amp; leadership
+              </p>
+              <ul>
+                <li>
+                  Led CAD, Web Development, and Tech Journal clubs; organized
+                  workshops and publications.
+                </li>
+                <li>
+                  Built early ML, robotics, and cloud projects that evolved into
+                  today&apos;s platforms.
+                </li>
+              </ul>
+            </div>
+
+            <div className={styles.educationItem}>
+              <span className={styles.educationBadge}>Self-Directed</span>
+              <h3>Independent Learning</h3>
+              <p className={styles.educationMeta}>
+                Always reading, prototyping, and shipping
+              </p>
+              <ul>
+                <li>
+                  Continuous work across AI/ML, distributed systems, and cloud
+                  architecture.
+                </li>
+                <li>
+                  Learning by building: from social platforms to study engines
+                  and health-tech dashboards.
+                </li>
+              </ul>
+            </div>
+          </div>
         </motion.div>
       </motion.section>
-      {/* Repeat the structure for other sections like My Story, My Motivation, etc., using motion.div and container/item variants for animations */}
+
+      {/* CONTACT STRIP (NO FORM) */}
       <motion.section
         className={styles.contactSection}
         initial="hidden"
         animate="show"
         variants={containerVariants}
       >
-        <motion.div variants={itemVariants} className={styles.contactForm}>
-          <h2>Contact Me</h2>
-          <form onSubmit={handleSubmit}>
-            <div className={styles.inputGroup}>
-              <input
-                type="text"
-                placeholder="Your Name"
-                name="name"
-                value={formValues.name}
-                onChange={handleChange}
-                required
-              />
-              <input
-                type="email"
-                placeholder="Your Email"
-                name="email"
-                value={formValues.email}
-                onChange={handleChange}
-                required
-              />
-              <textarea
-                placeholder="Your Message"
-                rows={4}
-                name="message"
-                value={formValues.message}
-                onChange={handleChange}
-                required
-              ></textarea>
-              <motion.button
-                whileHover="hover"
-                whileTap="tap"
-                variants={buttonVariants}
-                type="submit"
-              >
-                Send Message
-              </motion.button>
-            </div>
-          </form>
+        <motion.div variants={itemVariants} className={styles.contactCard}>
+          <h2>Let&apos;s Connect</h2>
+          <p className={styles.contactSubtitle}>
+            The fastest way to reach me is email, but I&apos;m active on GitHub
+            and LinkedIn too.
+          </p>
+
+          <div className={styles.contactGrid}>
+            <a
+              href="mailto:raiyanrzaman@gmail.com"
+              className={styles.contactItem}
+            >
+              <div className={styles.contactIconWrapper}>
+                <FaEnvelope className={styles.contactIcon} />
+              </div>
+              <div className={styles.contactText}>
+                <span className={styles.contactLabel}>Email</span>
+                <span className={styles.contactValue}>
+                  raiyanrzaman@gmail.com
+                </span>
+              </div>
+            </a>
+
+            <a
+              href="https://www.linkedin.com/in/raiyanzaman1"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.contactItem}
+            >
+              <div className={styles.contactIconWrapper}>
+                <FaLinkedin className={styles.contactIcon} />
+              </div>
+              <div className={styles.contactText}>
+                <span className={styles.contactLabel}>LinkedIn</span>
+                <span className={styles.contactValue}>/in/raiyanzaman1</span>
+              </div>
+            </a>
+
+            <a
+              href="https://github.com/rzaman8677"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.contactItem}
+            >
+              <div className={styles.contactIconWrapper}>
+                <FaGithub className={styles.contactIcon} />
+              </div>
+              <div className={styles.contactText}>
+                <span className={styles.contactLabel}>GitHub</span>
+                <span className={styles.contactValue}>@rzaman8677</span>
+              </div>
+            </a>
+          </div>
         </motion.div>
       </motion.section>
+
       <Footer />
     </div>
   );
